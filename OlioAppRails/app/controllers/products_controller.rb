@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[ show update destroy ]
+  skip_before_action :authorized, only: [:index]
 
   # GET /products
   def index
@@ -17,30 +17,24 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
-    if @product.save
-      render json: @product, status: :created, location: @product
-    else
-      render json: @product.errors, status: :unprocessable_entity
-    end
+    render json: product, status: 201
   end
 
   # PATCH/PUT /products/1
   def update
-    if @product.update(product_params)
-      render json: @product
-    else
-      render json: @product.errors, status: :unprocessable_entity
-    end
+    product= find_product
+    product.update!(product_params)
+    render json: product, status: 202
   end
 
-  # DELETE /products/1
-  def destroy
-    @product.destroy
-  end
+  # # DELETE /products/1
+  # def destroy
+  #   @product.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_product
+    def find_product
       @product = Product.find(params[:id])
     end
 

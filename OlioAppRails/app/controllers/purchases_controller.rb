@@ -1,51 +1,16 @@
 class PurchasesController < ApplicationController
-  before_action :set_purchase, only: %i[ show update destroy ]
-
-  # GET /purchases
-  def index
-    @purchases = Purchase.all
-
-    render json: @purchases
-  end
-
-  # GET /purchases/1
-  def show
-    render json: @purchase
-  end
-
-  # POST /purchases
-  def create
-    @purchase = Purchase.new(purchase_params)
-
-    if @purchase.save
-      render json: @purchase, status: :created, location: @purchase
-    else
-      render json: @purchase.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /purchases/1
-  def update
-    if @purchase.update(purchase_params)
-      render json: @purchase
-    else
-      render json: @purchase.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /purchases/1
-  def destroy
-    @purchase.destroy
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_purchase
-      @purchase = Purchase.find(params[:id])
+    def create
+        purchase= Purchase.create!(purchase_params)
+        purchased_items = params[:purchased_items]
+        purchased_items.each do |item| 
+            PurchasedItem.create!(purchase_id: purchase.id, product_id: item[:id], purchased_price: item[:price], quantity: item[:quantity])
+        end
+        render json: current_user, status: 201
     end
 
-    # Only allow a list of trusted parameters through.
+    private 
+
     def purchase_params
-      params.require(:purchase).permit(:user_id, :location, :tax, :shipping, :payment_method)
+        params.permit(:user_id, :location, :tax, :shipping, :payment_method)
     end
 end
