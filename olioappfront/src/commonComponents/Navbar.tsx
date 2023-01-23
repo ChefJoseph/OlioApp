@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../AuthProvider';
+// import LogOutNavtab from './LogOutNavTab';
 import ShopDropDown from './ShopDropDown';
 import ProfileDropDown from './ProfileDropDown';
 
@@ -8,6 +9,7 @@ function NavBar() {
   const navigate = useNavigate();
   const { user, cartTotalItems } = useContext(AuthContext);
 
+  console.log(user, "navbar")
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
     <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">

@@ -8,18 +8,18 @@ function FeaturedProduct() {
   const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
   const filteredProducts = productData.filter((item) => item.name!).reverse();
 
-  useEffect(() => {
-    fetch('/products')
-      .then((res) => {
-        if (res.ok) {
-          res.json()
-            .then((data) => {
-              console.log(data);
-              setProductData(data);
-            });
-        }
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch('/products')
+  //     .then((res) => {
+  //       if (res.ok) {
+  //         res.json()
+  //           .then((data) => {
+  //             console.log(data);
+  //             setProductData(data);
+  //           });
+  //       }
+  //     });
+  // }, []);
 
   // const handleCardClick = (product: IProduct) => {
   //   setProductData(product);

@@ -3,9 +3,9 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 function ShopDropDown() {
-    const onClick= ()=> {
-        console.log(1)
-    }
+    // const onClick= ()=> {
+    //     console.log(1)
+    // }
 const navigate = useNavigate()
 
   return (
