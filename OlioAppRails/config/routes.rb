@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :reviews
-  resources :purchases
+  resources :users, only:[:create, :show]
+  resources :reviews, only:[:create, :show]
+  resources :purchases, only:[:create]
   resources :purchased_items
-  resources :products
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :products, except: [:destroy, :show]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
