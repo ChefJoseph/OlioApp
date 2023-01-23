@@ -6,8 +6,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "./tsconfig.json"
+        "plugin:@typescript-eslint/recommended"
     ],
     "overrides": [
     ],
