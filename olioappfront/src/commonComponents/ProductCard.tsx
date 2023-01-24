@@ -1,25 +1,51 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import AuthContext from '../AuthProvider';
 import {Card} from 'flowbite-react'
 import olioVerde from '../assets/olioVerde.png'
 import { IProduct } from '../types/IProducts';
 import { useNavigate } from 'react-router-dom';
+import { IShoppingCart } from '../types/IShoppingCart';
+
 
 interface Props {
-  productData:IProduct[]
+  productData: any
   setProductData:React.Dispatch<React.SetStateAction<IProduct[]>>
 //   search:string
   product: any
+
 }
 
-// const navigate = useNavigate();
-
-// const handleClick = () => {
-
-// }
-
-
 function ProductCard({ product, productData, setProductData }: Props) {
+    const {
+        productItem, setProductItem, shoppingCart, setShoppingCart,
+      } = useContext(AuthContext);
+    const [addToCartNumber, setAddToCartNumber] = useState<number>(1);
+    const navigate = useNavigate();
 
+    const handleAddToCart = () => {
+        const newShoppingCartItem: IShoppingCart = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image_url: product.image_url,
+        quantity: addToCartNumber,
+        };
+         // eslint-disable-next-line no-param-reassign
+        if (shoppingCart.find((cart) => cart.id === product.id)) {
+        const updateProductQuantity = shoppingCart.map((cart) => {
+            if (cart.id === product.id && cart.quantity) {
+            // eslint-disable-next-line no-param-reassign
+            cart.quantity += addToCartNumber;
+            return cart;
+            }
+            return cart;
+        });
+        setShoppingCart(updateProductQuantity);
+        } else {
+        setShoppingCart([...shoppingCart, newShoppingCartItem]);
+        }
+        console.log(shoppingCart)
+    };
 
   return (
     <div className="max-w-xs max-h-xs mx-auto">
@@ -90,13 +116,13 @@ function ProductCard({ product, productData, setProductData }: Props) {
         <span className="text-3xl font-bold text-gray-900 dark:text-white">
           {product.price}
         </span>
-        <a
-          href="#"
+        <button
+          onClick= {()=> handleAddToCart()}
           className="rounded-lg bg-gray-800 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           
         >
           Add to cart
-        </a>
+        </button>
       </div>
     </Card>
   </div>

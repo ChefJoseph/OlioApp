@@ -1,10 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
+import { isCompositeComponent } from 'react-dom/test-utils';
 import AuthContext from '../../AuthProvider';
 import { IShoppingCart } from '../../types/IShoppingCart';
 
 
 function CartProductCards() {
 const { shoppingCart, setShoppingCart } = useContext(AuthContext);
+
+useEffect(() => {
+    console.log(shoppingCart, "cart")
+  }, []);
 
 const handleCartAdd = (product:IShoppingCart) => {
     const updateCartQuantity = shoppingCart.map((cart) => {
