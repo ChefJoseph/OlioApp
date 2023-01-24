@@ -7,13 +7,13 @@ function Admin() {
     const [search, setSearch] = useState<string>('');
 
   return (
-    <div>
+    <div className="mb-6">
         <AdminNavBar/>
-        <h1>Search Products</h1>
-            <div>
+        <h1 className="text-5xl mt-5 text-center">Search Products</h1>
+            <div className="flex justify-center">
                 <label htmlFor="searchBar">
                     <input
-                        className=""
+                        className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md mt-4"
                         style={{ width: '600px' }}
                         type="text"
                         name="searchbar"

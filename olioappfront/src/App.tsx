@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import AboutUs from "./pages/AboutUs"
 import Login from './pages/Login';
 import CreateAccountPage from './pages/Login/CreateAccountPage';
+import Admin from './pages/Admin'
 
 function App() {
   const {
@@ -58,6 +59,7 @@ function App() {
     <Route path="/about" element={<AboutUs/>} />
     <Route path="/login" element={<Login />} />
     <Route path="createAccount" element={<CreateAccountPage />} />
+    <Route path="/admin" element={<Admin/>} />
     
   </Routes>
   );
