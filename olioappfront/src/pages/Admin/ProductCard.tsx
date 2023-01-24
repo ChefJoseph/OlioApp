@@ -15,21 +15,23 @@ function ProductCard({ productData, setProductData, search }: Props) {
     const navigate = useNavigate();
     const { setProductItem } = useContext(AuthContext);
     const filteredProducts = productData.filter((item) => item.name!.toLowerCase().includes(search.toLowerCase())).reverse();
-    console.log(productData, "ProductCard")
-    
+
+
     const renderProducts = filteredProducts.map((product) => (
-        <div key={product.id} >
-            <div>
+        <div key={product.id} className = "w-52 h-52">
+            <div >
                 <img
-                className="w-full h-2/3 border-b "
+                className=" w-52 h-64 max-w-full classes object-contain border-b "
                 src={product.image_url ? product.image_url : ""}
-                alt={oliveoil}
+                alt={"loading"}
+        
                 />
                 <div>
                 <div>{product.name}</div>
                 <div>
                     <span>{product.price}</span>
-                    <span>{product.category}</span>
+                    <span>{product.region}</span>
+                    <span>{product.location}</span>
                 </div>
                 {/* <div>{product.description}</div> */}
                 </div>
@@ -46,13 +48,11 @@ function ProductCard({ productData, setProductData, search }: Props) {
       ));
 
     return (
-        <div className="mt-10">
-        <div className="flex">
+        <div id="productcard" className="flex">
             <AdminSideBar setProductData={setProductData}/>
-            <div className="grid lg:grid-cols-4 sm:grid-cols-2 w-4/5 gap-6 mb-10 mr-10">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-2 w-4/5 h-80 gap-6 m-10">
             {renderProducts}
             </div>
-        </div>
         </div>
     )
 }

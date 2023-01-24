@@ -24,7 +24,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allItaly = data.filter((item:IProduct) => item.active === true && item.category === 'Italy');
+                  const allItaly = data.filter((item:IProduct) => item.active === true && item.region === 'Italy');
                   setProductData(allItaly);
                 });
             }
@@ -37,7 +37,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allSpain = data.filter((item:IProduct) => item.active === true && item.category === 'Spain');
+                  const allSpain = data.filter((item:IProduct) => item.active === true && item.region=== 'Spain');
                   setProductData(allSpain);
                 });
             }
@@ -50,7 +50,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allGreece = data.filter((item:IProduct) => item.active === true && item.category === 'Greece');
+                  const allGreece = data.filter((item:IProduct) => item.active === true && item.region === 'Greece');
                   setProductData(allGreece);
                 });
             }
@@ -63,7 +63,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allOrganic = data.filter((item:IProduct) => item.active === true && item.category === 'Organic');
+                  const allOrganic = data.filter((item:IProduct) => item.active === true && item.organic === true);
                   setProductData(allOrganic);
                 });
             }
@@ -76,7 +76,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allFlavored = data.filter((item:IProduct) => item.active === true && item.category === 'Flavored');
+                  const allFlavored = data.filter((item:IProduct) => item.active === true && item.flavored === true);
                   setProductData(allFlavored);
                 });
             }
@@ -89,7 +89,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allCooking = data.filter((item:IProduct) => item.active === true && item.category === 'Cooking');
+                  const allCooking = data.filter((item:IProduct) => item.active === true && item.forcooking === true);
                   setProductData(allCooking);
                 });
             }
@@ -109,7 +109,7 @@ function AdminSideBar({ setProductData }:Props) {
       };
     
   return (
-    <div className="flex flex-col w-1/5 text-3xl text-black mx-5">
+    <div id="adminsidebar" className="flex flex-col w-1/5 text-3xl text-black mx-5">
       <p className="text-center text-white bg-slate-900 rounded-t-lg py-4 font-bold">Categories</p>
       <div className="flex flex-col ">
         <button
