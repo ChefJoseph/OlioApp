@@ -12,17 +12,17 @@ function NavBar() {
   console.log(user, "navbar")
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
-    <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
-		<div className="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+    <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+		<div className="md:flex md:items-center order-1 md:order-1 " id="menu">
 			<nav>
-				<ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+				<ul className="md:flex items-center justify-between text-base text-gray-700 md:pt-0">
 {/* Shop */}
-					<li className= "hover:text-yellow-300">
+					<li className= " hover:text-yellow-300">
 						<ShopDropDown  />
 					</li>
 {/* About */}
-					<li className="" >
-						<button className="inline-block no-underline hover:text-yellow-300 py-2 px-4"  type="button" onClick={() => navigate('/about')} >About</button>
+					<li className="hidden md:flex" >
+						<button className="inline-block no-underline hover:text-yellow-300 font-medium py-2 px-4"  type="button" onClick={() => navigate('/about')} >About</button>
 					</li>
 				</ul>
 			</nav>
@@ -37,7 +37,7 @@ function NavBar() {
 			</button> */}
 		</div>
 
-		<div className="order-2 md:order-3 flex items-center text-gray-700" id="nav-content">
+		<div className="order-2 md:order-2 flex items-center text-gray-700" id="nav-content">
 {/*Profile*/}
 			<div >
 				{user.account_type === 'user' ? <span

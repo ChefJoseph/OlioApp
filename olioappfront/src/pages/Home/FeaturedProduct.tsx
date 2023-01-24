@@ -34,8 +34,8 @@ function FeaturedProduct() {
   return (
     <div className="container py-16 mx-auto" >
 		<div >
-			<h2 className="text-2xl font-medium text-gray-800 uppercase mb-6">
-            Featured Product
+			<h2 className="text-2xl font-medium text-gray-700 mb-6">
+            Featured product
 			</h2>
 			<div className="flex flex-row ">
 				{renderProducts}
