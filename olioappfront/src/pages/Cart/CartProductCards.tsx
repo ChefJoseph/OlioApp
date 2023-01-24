@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AuthContext from '../../AuthProvider';
+import { IShoppingCart } from '../../types/IShoppingCart';
+
 
 function CartProductCards() {
+const { shoppingCart, setShoppingCart } = useContext(AuthContext);
+
+const renderCart = shoppingCart.map((product) => (
+    <div id="cartmaprender" key={product.id}>
+        <div>
+            <img 
+            src={product.image_url}
+            alt={product.name}
+            />
+        </div>
+        <div>
+            <p>{product.name}</p>
+            <p>{product.price}</p>
+        </div>
+        <div>
+            <button> - </button>
+            <p>{product.quantity}</p>
+            <button> + </button>
+        </div>
+        <div>
+            <p>${product.price && product.quantity ? (product.price * product.quantity) : ''}</p>
+        </div>
+        <button>
+            Remove Item
+        </button>
+    </div>
+))
   return (
-    <div className="container py-3 mx-10 mt-10">
-        <div id="cartheaders" className="flex justify-around text-4xl  border-b ">
-            <p>Product</p>
-            <p>Unit Price</p>
-            <p>Quantity</p>
-            <p>Price</p>
-            <button>Clear cart</button>
-        </div>
-        <div id="cartcards">
-            renderCartDetails
-        </div>
-        
+    <div id="cartcards">
+        {renderCart}
     </div>
   )
 }
