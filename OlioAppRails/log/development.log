@@ -1611,3 +1611,526 @@ Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 2514)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mProduct Update (4.7ms)[0m  [1m[33mUPDATE "products" SET "forcooking" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["forcooking", 0], ["updated_at", "2023-01-24 05:41:22.542119"], ["id", 1]]
   [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/me" for 127.0.0.1 at 2023-01-24 00:44:22 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (60.91ms)
+Completed 200 OK in 108ms (Views: 88.7ms | ActiveRecord: 4.9ms | Allocations: 7236)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-24 00:50:20 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.06ms)
+Completed 200 OK in 44ms (Views: 14.2ms | ActiveRecord: 4.5ms | Allocations: 2232)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 00:50:33 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.89ms)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 2.8ms | Allocations: 2606)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 00:55:19 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.65ms)
+Completed 200 OK in 33ms (Views: 28.1ms | ActiveRecord: 1.0ms | Allocations: 2509)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-24 00:58:04 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.09ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1911)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 00:58:11 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 2491)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 00:58:13 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.86ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.7ms | Allocations: 2491)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 00:58:15 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 2491)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 00:58:17 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.49ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.6ms | Allocations: 2485)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 00:58:19 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 2506)
+
+
+Started POST "/products" for 127.0.0.1 at 2023-01-24 01:06:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#create as */*
+  Parameters: {"image_url"=>#<ActionDispatch::Http::UploadedFile:0x000000010d5aed40 @tempfile=#<Tempfile:/var/folders/nm/j5wb_b0x7xjcb8ywxt27n7wr0000gp/T/RackMultipart20230124-97457-woc0aj.png>, @original_filename="olioVerde.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image_url\"; filename=\"olioVerde.png\"\r\nContent-Type: image/png\r\n">, "name"=>"Olio Verde", "region"=>"Sicily", "location"=>"Palermo", "description"=>"Spicy and bright green!", "price"=>"29.99", "organic"=>"", "flavored"=>"false", "forcooking"=>"false", "active"=>"true"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mProduct Create (3.8ms)[0m  [1m[32mINSERT INTO "products" ("region", "location", "name", "image_url", "description", "price", "organic", "flavored", "forcooking", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["region", "Sicily"], ["location", "Palermo"], ["name", "Olio Verde"], ["image_url", nil], ["description", "Spicy and bright green!"], ["price", 29.99], ["organic", nil], ["flavored", 0], ["forcooking", 0], ["active", 1], ["created_at", "2023-01-24 06:06:47.346767"], ["updated_at", "2023-01-24 06:06:47.346767"]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Blob Create (1.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "se2qv133ul5uhlrejkg815n8c4a4"], ["filename", "olioVerde.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 78932], ["checksum", "dBTIUsOyvJeM+SGzi5lRSw=="], ["created_at", "2023-01-24 06:06:47.422959"]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image_url"], ["record_type", "Product"], ["record_id", 2], ["blob_id", 1], ["created_at", "2023-01-24 06:06:47.427442"]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2023-01-24 06:06:47.431754"], ["id", 2]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:16:in `create'
+[36m  Disk Storage (2.1ms) [0m[32mUploaded file to key: se2qv133ul5uhlrejkg815n8c4a4 (checksum: dBTIUsOyvJeM+SGzi5lRSw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5eb605dd-5262-4667-9ba5-88340acc59f2) to Async(default) with arguments: #<GlobalID:0x000000010e199dd0 @uri=#<URI::GID gid://olio-app-rails/ActiveStorage::Blob/1>>
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (15.44ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 14.2ms | Allocations: 63000)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 2, region: "Sicily", location: "Palermo", name: "Olio Verde", image_url: nil, description: "Spicy and bright green!", price: 29.99, organic: nil, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 06:06:47.346767000 +0000", updated_at: "2023-01-24 06:06:47.431754000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:17:in `create'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5eb605dd-5262-4667-9ba5-88340acc59f2]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5eb605dd-5262-4667-9ba5-88340acc59f2] Performing ActiveStorage::AnalyzeJob (Job ID: 5eb605dd-5262-4667-9ba5-88340acc59f2) from Async(default) enqueued at 2023-01-24T06:06:47Z with arguments: #<GlobalID:0x000000010e710d90 @uri=#<URI::GID gid://olio-app-rails/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5eb605dd-5262-4667-9ba5-88340acc59f2] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5eb605dd-5262-4667-9ba5-88340acc59f2]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5eb605dd-5262-4667-9ba5-88340acc59f2]   [1m[36mActiveStorage::Blob Update (0.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5eb605dd-5262-4667-9ba5-88340acc59f2]   [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5eb605dd-5262-4667-9ba5-88340acc59f2] Performed ActiveStorage::AnalyzeJob (Job ID: 5eb605dd-5262-4667-9ba5-88340acc59f2) from Async(default) in 587.47ms
+Started POST "/products" for 127.0.0.1 at 2023-01-24 01:16:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#create as */*
+  Parameters: {"image_url"=>#<ActionDispatch::Http::UploadedFile:0x000000010ca65880 @tempfile=#<Tempfile:/var/folders/nm/j5wb_b0x7xjcb8ywxt27n7wr0000gp/T/RackMultipart20230124-5411-5e8lzz.png>, @original_filename="olioVerde.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image_url\"; filename=\"olioVerde.png\"\r\nContent-Type: image/png\r\n">, "name"=>"Olio Verde", "region"=>"Sicily", "location"=>"Palermo", "description"=>"Spicy and bright green!", "price"=>"29.99", "organic"=>"", "flavored"=>"false", "forcooking"=>"false", "active"=>"true"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mProduct Create (1.1ms)[0m  [1m[32mINSERT INTO "products" ("region", "location", "name", "image_url", "description", "price", "organic", "flavored", "forcooking", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["region", "Sicily"], ["location", "Palermo"], ["name", "Olio Verde"], ["image_url", nil], ["description", "Spicy and bright green!"], ["price", 29.99], ["organic", nil], ["flavored", 0], ["forcooking", 0], ["active", 1], ["created_at", "2023-01-24 06:16:41.380583"], ["updated_at", "2023-01-24 06:16:41.380583"]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "cklgksks13tq2k2jlxltbi02xlne"], ["filename", "olioVerde.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 78932], ["checksum", "dBTIUsOyvJeM+SGzi5lRSw=="], ["created_at", "2023-01-24 06:16:41.518032"]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image_url"], ["record_type", "Product"], ["record_id", 3], ["blob_id", 2], ["created_at", "2023-01-24 06:16:41.522208"]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mProduct Update (0.1ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2023-01-24 06:16:41.525240"], ["id", 3]]
+  ↳ app/controllers/products_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:16:in `create'
+[36m  Disk Storage (3.6ms) [0m[32mUploaded file to key: cklgksks13tq2k2jlxltbi02xlne (checksum: dBTIUsOyvJeM+SGzi5lRSw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 17a58c96-ecd6-441c-a7de-5fedd20ba523) to Async(default) with arguments: #<GlobalID:0x000000010ce5aee0 @uri=#<URI::GID gid://olio-app-rails/ActiveStorage::Blob/2>>
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (11.74ms)
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 10.0ms | Allocations: 68025)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 3, region: "Sicily", location: "Palermo", name: "Olio Verde", image_url: nil, description: "Spicy and bright green!", price: 29.99, organic: nil, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 06:16:41.380583000 +0000", updated_at: "2023-01-24 06:16:41.525240000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:17:in `create'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [17a58c96-ecd6-441c-a7de-5fedd20ba523]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [17a58c96-ecd6-441c-a7de-5fedd20ba523] Performing ActiveStorage::AnalyzeJob (Job ID: 17a58c96-ecd6-441c-a7de-5fedd20ba523) from Async(default) enqueued at 2023-01-24T06:16:41Z with arguments: #<GlobalID:0x000000010e98d9b0 @uri=#<URI::GID gid://olio-app-rails/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [17a58c96-ecd6-441c-a7de-5fedd20ba523] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: cklgksks13tq2k2jlxltbi02xlne[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [17a58c96-ecd6-441c-a7de-5fedd20ba523]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [17a58c96-ecd6-441c-a7de-5fedd20ba523]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"width\":305,\"height\":392,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [17a58c96-ecd6-441c-a7de-5fedd20ba523]   [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [17a58c96-ecd6-441c-a7de-5fedd20ba523] Performed ActiveStorage::AnalyzeJob (Job ID: 17a58c96-ecd6-441c-a7de-5fedd20ba523) from Async(default) in 569.03ms
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:17:35 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (30.9ms)
+Completed 200 OK in 58ms (Views: 52.5ms | ActiveRecord: 1.9ms | Allocations: 7144)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:17:37 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.44ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms | Allocations: 9658)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:17:39 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.74ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 9330)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:17:41 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.92ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms | Allocations: 9333)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:20:56 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (151.94ms)
+Completed 200 OK in 195ms (Views: 172.5ms | ActiveRecord: 1.2ms | Allocations: 1927)
+
+
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:26:46 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.93ms)
+Completed 200 OK in 35ms (Views: 16.5ms | ActiveRecord: 2.0ms | Allocations: 2126)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:27:37 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.45ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 1888)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:29:10 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:29:10 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.49ms)
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.15ms)
+Completed 200 OK in 27ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 7682)
+
+
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.6ms | Allocations: 12113)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:29:27 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.49ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms | Allocations: 9303)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:29:27 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.32ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.8ms | Allocations: 4385)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:29:37 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.92ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms | Allocations: 9362)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:29:45 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.49ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms | Allocations: 9305)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:29:47 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.01ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 9308)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:29:51 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.25ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 9305)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:29:55 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.43ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 9306)
+
+
+  
+NoMethodError (undefined method `image' for #<Product id: 1, region: "California", location: "Sonoma", name: "Costco Olive Oil", image_url: "#<ActionDispatch::Http::UploadedFile:0x00000001069...", description: "Good Stuff", price: 20.99, organic: true, flavored: false, forcooking: false, active: true, created_at: "2023-01-24 05:36:04.378482000 +0000", updated_at: "2023-01-24 05:41:22.542119000 +0000">
+Did you mean?  image_url):
+  
+app/serializers/product_serializer.rb:5:in `image_url'
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:32:34 -0500
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:32:34 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.22ms)
+Completed 200 OK in 71ms (Views: 61.2ms | ActiveRecord: 4.1ms | Allocations: 23895)
+
+
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.07ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 1.3ms | Allocations: 8973)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891/olioVerde.png" for 127.0.0.1 at 2023-01-24 01:32:36 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69f4df02f981bd18dc60332243b60633375050a9/olioVerde.png" for 127.0.0.1 at 2023-01-24 01:32:36 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891", "filename"=>"olioVerde"}
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69f4df02f981bd18dc60332243b60633375050a9", "filename"=>"olioVerde"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (6.9ms) [0m[34mGenerated URL for file at key: cklgksks13tq2k2jlxltbi02xlne (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMnRzWjJ0emEzTXhNM1J4TW1zeWFteDRiSFJpYVRBeWVHeHVaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--2c00677e56cdfd6c89564ee691dfdebb100ebf7f/olioVerde.png)[0m
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: se2qv133ul5uhlrejkg815n8c4a4 (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjMlV5Y1hZeE16TjFiRFYxYUd4eVpXcHJaemd4Tlc0NFl6UmhOQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTE2WiIsInB1ciI6ImJsb2Jfa2V5In19--cf74b1ff2350a6cda6676392f6de6f612e778277/olioVerde.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMnRzWjJ0emEzTXhNM1J4TW1zeWFteDRiSFJpYVRBeWVHeHVaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--2c00677e56cdfd6c89564ee691dfdebb100ebf7f/olioVerde.png
+Completed 302 Found in 46ms (ActiveRecord: 1.1ms | Allocations: 7817)
+
+
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjMlV5Y1hZeE16TjFiRFYxYUd4eVpXcHJaemd4Tlc0NFl6UmhOQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTE2WiIsInB1ciI6ImJsb2Jfa2V5In19--cf74b1ff2350a6cda6676392f6de6f612e778277/olioVerde.png
+Completed 302 Found in 42ms (ActiveRecord: 1.0ms | Allocations: 7466)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMnRzWjJ0emEzTXhNM1J4TW1zeWFteDRiSFJpYVRBeWVHeHVaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--2c00677e56cdfd6c89564ee691dfdebb100ebf7f/olioVerde.png" for 127.0.0.1 at 2023-01-24 01:32:38 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"olioVerde"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjMlV5Y1hZeE16TjFiRFYxYUd4eVpXcHJaemd4Tlc0NFl6UmhOQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTE2WiIsInB1ciI6ImJsb2Jfa2V5In19--cf74b1ff2350a6cda6676392f6de6f612e778277/olioVerde.png" for 127.0.0.1 at 2023-01-24 01:32:38 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"olioVerde"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 157)
+
+
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+  [1m[36mProduct Destroy (2.0ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started GET "/products" for 127.0.0.1 at 2023-01-24 01:34:13 -0500
+Started GET "/me" for 127.0.0.1 at 2023-01-24 01:34:13 -0500
+Processing by ProductsController#index as */*
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.89ms)
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 2437)
+
+
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.58ms)
+Completed 200 OK in 64ms (Views: 50.0ms | ActiveRecord: 4.3ms | Allocations: 18196)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMnRzWjJ0emEzTXhNM1J4TW1zeWFteDRiSFJpYVRBeWVHeHVaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTA5WiIsInB1ciI6ImJsb2Jfa2V5In19--2c00677e56cdfd6c89564ee691dfdebb100ebf7f/olioVerde.png" for 127.0.0.1 at 2023-01-24 01:34:15 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjMlV5Y1hZeE16TjFiRFYxYUd4eVpXcHJaemd4Tlc0NFl6UmhOQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjRUMDY6Mzc6MzYuNTE2WiIsInB1ciI6ImJsb2Jfa2V5In19--cf74b1ff2350a6cda6676392f6de6f612e778277/olioVerde.png" for 127.0.0.1 at 2023-01-24 01:34:15 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"olioVerde"}
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"olioVerde"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 527)
+
+
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 145)
+
+

@@ -68,3 +68,5 @@ gem 'email_validator'
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'listen'
+
+gem 'ruby-vips', '~> 2.1', '>= 2.1.4'
