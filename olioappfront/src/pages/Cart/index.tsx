@@ -11,10 +11,11 @@ function Cart() {
         <div>
            <CartProductCards/>
         </div>
-        <div>
+        <div className="grid justify-items-end">
             Total
+            <button>Checkout</button>
         </div>
-        <button>Checkout</button>
+        
         <Footer/>
     </div>
   )
