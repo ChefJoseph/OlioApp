@@ -1,12 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AdminNavBar from './AdminNavBar'
 import ProductCard from './ProductCard'
 import Footer from '../../CommonComponents/Footer'
 import { EmptyProductValue, IProduct } from '../../types/IProducts';
 
 function Admin() {
-    const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
-    const [search, setSearch] = useState<string>('');
+  const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
+  const [search, setSearch] = useState<string>('');
+
+  useEffect(() => {
+      fetch('/products')
+        .then((res) => {
+          if (res.ok) {
+            res.json()
+              .then((data) => {
+                const allProducts = data.filter((item:IProduct) => item.active === true);
+                setProductData(allProducts);
+                console.log(data, "index, /products")
+              });
+          }
+        });
+    }, []);
 
   return (
     <div className="mb-6">

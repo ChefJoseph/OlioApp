@@ -21,7 +21,7 @@ function AddProduct() {
     e.preventDefault();
     const formData = new FormData();
     if (image) {
-      formData.append('image', image);
+      formData.append('image_url', image);
     }
     formData.append('name', name);
     formData.append('region', region);
@@ -31,7 +31,7 @@ function AddProduct() {
     formData.append('description', description);
     formData.append('organic', organic);
     formData.append('flavored', flavored);
-    formData.append('forCooking', forCooking);
+    formData.append('forcooking', forCooking);
     formData.append('active', activeStatus);
 
     fetch('/products', {
@@ -65,53 +65,105 @@ function AddProduct() {
                     <p>Name</p>
                     <label>
                         <input
+                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          type="text"
+                          name="name"
+                          placeholder="Name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                         />
                     </label>
                     <p>Region</p>
-                    <label>
-                        <input
-                        />
-                    </label>
+                        <select
+                            className="w-full text-xl py-2 px-3 border cursor-default"
+                            value={region}
+                            onChange={(e) => setRegion(e.target.value)}
+                        >
+                            <option value=""></option>
+                            <option value="Italy">Italy</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Greece">Greece</option>
+                        </select>
                     <p>Location</p>
                     <label>
                         <input
+                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          type="text"
+                          name="location"
+                          placeholder="Location"
+                          value={location}
+                          onChange={(e) => setLocation(e.target.value)}
                         />
                     </label>
                     <p>Image</p>
-                    <label>
                         <input
+                          className="ml-20 mt-1"
+                          type="file"
+                          accept="image/*"
+                          onChange={(e) => {
+                            if (e.target.files) {
+                              setImage(e.target.files[0]);
+                            }
+                          }}            
                         />
-                    </label>
                     <p>Description</p>
                     <label>
-                        <input
+                        <textarea
+                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          name="description"
+                          placeholder="Add Description"
+                          rows={2}
+                          value={description}
+                          onChange={(e) => setDescription(e.target.value)}
                         />
                     </label>
                     <p>Price</p>
                     <label>
                         <input
+                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          type="number"
+                          name="price"
+                          placeholder="Price"
+                          value={price}
+                          onChange={(e) => setPrice(e.target.value)}
                         />
                     </label>
                     <p>Organic</p>
-                    <label>
-                        <input
-                        />
-                    </label>
+                        <select
+                          className="w-full text-xl py-2 px-3 border cursor-default"
+                          value={organic}
+                          onChange={(e) => setOrganic(e.target.value)}
+                        >
+                          <option value=""></option>
+                          <option value="true">Yes</option>
+                          <option value="false">No</option>
+                        </select>
                     <p>Flavored</p>
-                    <label>
-                        <input
-                        />
-                    </label>
+                        <select
+                          className="w-full text-xl py-2 px-3 border cursor-default"
+                          value={flavored}
+                          onChange={(e) => setFlavored(e.target.value)}
+                        >
+                          <option value=""></option>
+                          <option value="true">Yes</option>
+                          <option value="false">No</option>
+                        </select>
                     <p>For Cooking</p>
-                    <label>
-                        <input
-                        />
-                    </label>
-                    <p>Active</p>
-                    <label>
-                        <input
-                        />
-                    </label>                    
+                        <select
+                          className="w-full text-xl py-2 px-3 border cursor-default"
+                          value={forCooking}
+                          onChange={(e) => setForCooking(e.target.value)}
+                        >
+                          <option value=""></option>
+                          <option value="true">Yes</option>
+                          <option value="false">No</option>
+                        </select> 
+                    <button
+                        className="bg-slate-900 text-white mt-6 py-3 px-6 rounded-md hover:bg-slate-800 w-full text-xl"
+                        type="submit"
+                    >
+                        Add New Product
+                    </button>                 
                 </form>
             </div>
         </div>
