@@ -6,6 +6,35 @@ import { IShoppingCart } from '../../types/IShoppingCart';
 function CartProductCards() {
 const { shoppingCart, setShoppingCart } = useContext(AuthContext);
 
+const handleCartAdd = (product:IShoppingCart) => {
+    const updateCartQuantity = shoppingCart.map((cart) => {
+      if (cart.id === product.id && cart.quantity) {
+        cart.quantity += 1;
+      }
+      return cart;
+    });
+    setShoppingCart(updateCartQuantity);
+  };
+
+  const handleCartSubtract= (product:IShoppingCart) => {
+    const updateCartQuantity = shoppingCart.map((cart) => {
+      if (cart.id === product.id && cart.quantity && cart.quantity > 1) {
+        cart.quantity -= 1;
+      }
+      return cart;
+    });
+    setShoppingCart(updateCartQuantity);
+  };
+
+  const handleRemoveAllItems = () => {
+    setShoppingCart([]);
+  };
+
+  const handleRemoveSingleItem = (product:IShoppingCart) => {
+    const arrayWithoutItem = shoppingCart.filter((cart) => cart.id !== product.id);
+    setShoppingCart(arrayWithoutItem);
+  };
+
 const renderCart = shoppingCart.map((product) => (
     <div id="cartmaprender" key={product.id}>
         <div>
@@ -19,14 +48,14 @@ const renderCart = shoppingCart.map((product) => (
             <p>{product.price}</p>
         </div>
         <div>
-            <button> - </button>
+            <button onClick={() => handleCartSubtract(product)}> - </button>
             <p>{product.quantity}</p>
-            <button> + </button>
+            <button onClick={() => handleCartAdd(product)}> + </button>
         </div>
         <div>
             <p>${product.price && product.quantity ? (product.price * product.quantity) : ''}</p>
         </div>
-        <button>
+        <button onClick = {() => handleRemoveSingleItem(product) }>
             Remove Item
         </button>
     </div>
@@ -34,6 +63,7 @@ const renderCart = shoppingCart.map((product) => (
   return (
     <div id="cartcards">
         {renderCart}
+        <button onClick={() => handleRemoveAllItems()}>Clear cart</button>
     </div>
   )
 }

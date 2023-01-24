@@ -15,7 +15,6 @@ function Cart() {
                 <p>Unit Price</p>
                 <p>Quantity</p>
                 <p>Price</p>
-                <button>Clear cart</button>
             </div>
         </div>
 {/* renderCartCards         */}
