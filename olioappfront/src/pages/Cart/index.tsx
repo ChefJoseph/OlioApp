@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../../CommonComponents/Navbar'
 import Footer from '../../CommonComponents/Footer'
+import CartProductCards from './CartProductCards'
 
 function Cart() {
   return (
@@ -8,7 +9,7 @@ function Cart() {
         <NavBar/>
         <h1>Cart</h1>
         <div>
-            CartProductCards
+           <CartProductCards/>
         </div>
         <div>
             Total
