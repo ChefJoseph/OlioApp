@@ -11,13 +11,13 @@ interface Props {
     search:string
 }
 
-function ProductCard({ productData, setProductData, search }: Props) {
+function ProductCard({productData, setProductData, search }: Props) {
     const navigate = useNavigate();
     const { setProductItem } = useContext(AuthContext);
     const filteredProducts = productData.filter((item) => item.name!.toLowerCase().includes(search.toLowerCase())).reverse();
 
 
-    const renderProducts = filteredProducts.map((product) => (
+    const renderProducts = filteredProducts.map((product: IProduct) => (
         <div key={product.id} className = "w-52 h-88 border border-black-400">
             <div >
                 <img

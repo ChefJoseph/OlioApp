@@ -6,28 +6,28 @@ import { EmptyProductValue, IProduct } from '../../types/IProducts';
 function FeaturedProduct() {
   const navigate = useNavigate()
   const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
-  const filteredProducts = productData.filter((item) => item.name!).reverse();
+  const filteredProducts = productData.filter((item, index) => item.name! && index > 0).reverse() ;
 
-  // useEffect(() => {
-  //   fetch('/products')
-  //     .then((res) => {
-  //       if (res.ok) {
-  //         res.json()
-  //           .then((data) => {
-  //             console.log(data);
-  //             setProductData(data);
-  //           });
-  //       }
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch('/products')
+      .then((res) => {
+        if (res.ok) {
+          res.json()
+            .then((data) => {
+              console.log(data);
+              setProductData(data);
+            });
+        }
+      });
+  }, []);
 
   // const handleCardClick = (product: IProduct) => {
   //   setProductData(product);
   //   navigate('/individualProduct');
   // };
-
+/* tslint:disable-next-line */
   const renderProducts = filteredProducts.map((product: IProduct) => (
-		<ProductCard key={product.id} productData={productData} setProductData={setProductData} search={''}/>
+		<ProductCard key={product.id} product={product} productData={productData} setProductData={setProductData} />
   )
   )
 

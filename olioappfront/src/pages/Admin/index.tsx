@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import AdminNavBar from './AdminNavBar'
 import AdminSideBar from './AdminSideBar'
-import ProductCard from './ProductCard'
+import ProductCard from './AdminProductCard'
 import Footer from '../../CommonComponents/Footer'
 import { EmptyProductValue, IProduct } from '../../types/IProducts';
 

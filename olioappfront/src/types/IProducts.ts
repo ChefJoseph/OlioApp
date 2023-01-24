@@ -9,7 +9,7 @@ export interface IProduct {
   organic?: boolean | undefined,
   flavored?: boolean| undefined,
   forcooking?: boolean | undefined,
-  active?: boolean | undefined
+  active?: boolean | undefined,
 }
 
 export const EmptyProductValue = {

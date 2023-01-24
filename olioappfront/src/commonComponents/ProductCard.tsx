@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom';
 interface Props {
   productData:IProduct[]
   setProductData:React.Dispatch<React.SetStateAction<IProduct[]>>
-  search:string
+//   search:string
+  product: any
 }
 
 // const navigate = useNavigate();
@@ -17,25 +18,27 @@ interface Props {
 // }
 
 
-function ProductCard({ productData, setProductData }: Props) {
+function ProductCard({ product, productData, setProductData }: Props) {
 
 
   return (
     <div className="max-w-sm mx-auto">
     <Card
       imgAlt="Olio Verde"
-      imgSrc= {olioVerde}
+
+      imgSrc= {product.image_url}
       className="border-none shadow-none"
     >
       <a href="#">
         <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-          Olio Verde
+
+          {product.name}
         </h3>
         <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-          Sicily
+          {product.region}
         </h3>
         <h4>
-            Robust, Fresh
+            {product.description}
         </h4>
       </a>
       <div className="mt-2.5 mb-5 flex items-center">
@@ -85,7 +88,7 @@ function ProductCard({ productData, setProductData }: Props) {
       </div>
       <div className="flex items-center justify-between">
         <span className="text-3xl font-bold text-gray-900 dark:text-white">
-          $39
+          {product.price}
         </span>
         <a
           href="#"
