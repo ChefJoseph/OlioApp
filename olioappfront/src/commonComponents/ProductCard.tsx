@@ -22,7 +22,7 @@ function ProductCard({ product, productData, setProductData }: Props) {
 
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="max-w-xs max-h-xs mx-auto">
     <Card
       imgAlt="Olio Verde"
 
@@ -37,9 +37,9 @@ function ProductCard({ product, productData, setProductData }: Props) {
         <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
           {product.region}
         </h3>
-        <h4>
+        {/* <h4 className="h-20 overflow-hidden bg-gradient-to-b from-transparent to-gray-100">
             {product.description}
-        </h4>
+        </h4> */}
       </a>
       <div className="mt-2.5 mb-5 flex items-center">
         <svg
