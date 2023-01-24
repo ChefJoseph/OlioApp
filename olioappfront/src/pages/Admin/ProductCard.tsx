@@ -18,7 +18,7 @@ function ProductCard({ productData, setProductData, search }: Props) {
 
 
     const renderProducts = filteredProducts.map((product) => (
-        <div key={product.id} className = "w-52 h-52">
+        <div key={product.id} className = "w-52 h-88 border border-black-400">
             <div >
                 <img
                 className=" w-52 h-64 max-w-full classes object-contain border-b "
@@ -29,8 +29,8 @@ function ProductCard({ productData, setProductData, search }: Props) {
                 <div>
                 <div>{product.name}</div>
                 <div>
-                    <span>{product.price}</span>
-                    <span>{product.region}</span>
+                    <span className="pr-1">${product.price}</span>
+                    <span className="pr-1">{product.region}</span>
                     <span>{product.location}</span>
                 </div>
                 {/* <div>{product.description}</div> */}
@@ -48,9 +48,8 @@ function ProductCard({ productData, setProductData, search }: Props) {
       ));
 
     return (
-        <div id="productcard" className="flex">
-            <AdminSideBar setProductData={setProductData}/>
-            <div className="grid lg:grid-cols-4 sm:grid-cols-2 w-4/5 h-80 gap-6 m-10">
+        <div id="productcard" className="flex justify-center">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-10 ">
             {renderProducts}
             </div>
         </div>

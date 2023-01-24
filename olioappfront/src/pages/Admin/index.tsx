@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import AdminNavBar from './AdminNavBar'
+import AdminSideBar from './AdminSideBar'
 import ProductCard from './ProductCard'
 import Footer from '../../CommonComponents/Footer'
 import { EmptyProductValue, IProduct } from '../../types/IProducts';
@@ -25,21 +26,30 @@ function Admin() {
   return (
     <div id= "index" className="mb-6">
         <AdminNavBar/>
-        <h1 className="text-5xl mt-5 text-center">Search Products</h1>
-        <div className="flex justify-center">
-            <label htmlFor="searchBar">
-                <input
-                    className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md mt-4"
-                    style={{ width: '600px' }}
-                    type="text"
-                    name="searchbar"
-                    placeholder="Search by Name"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-            </label>
+        <div id="adminbody" className="flex row ">
+          <AdminSideBar setProductData={setProductData}/>
+  {/* Search */}
+          <div id="productshell" className="w-full">
+            <h1 className="text-5xl mt-5 text-center text-gray-800 ">Search Products</h1>
+            <div className="flex justify-center mb-10">
+                <label htmlFor="searchBar">
+                    <input
+                        className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md mt-4"
+                        style={{ width: '600px' }}
+                        type="text"
+                        name="searchbar"
+                        placeholder="Search by Name"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                </label>
+            </div>
+    {/* Products */}
+            <div id="productdiv" className="">
+              <ProductCard productData={productData} setProductData={setProductData} search={search}/>
+            </div>
+          </div>
         </div>
-        <ProductCard productData={productData} setProductData={setProductData} search={search}/>
         <Footer/>
     </div>
   )
