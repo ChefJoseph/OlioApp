@@ -111,62 +111,64 @@ function AdminSideBar({ setProductData }:Props) {
   return (
     <div className="flex flex-col w-1/5 text-3xl text-black mx-5">
       <p className="text-center text-white bg-slate-900 rounded-t-lg py-4 font-bold">Categories</p>
-      <button
-        className="py-3 hover:text-red-400 border text-left"
-        type="button"
-        onClick={handleAllProducts}
-      >
-        All Products
-      </button>
-      <button
-        className="py-3 hover:text-red-400 border"
-        type="button"
-        onClick={handleItaly}
-      >
-        Italy
-      </button>
-      <button
-        className="py-3 hover:text-red-400 border"
-        type="button"
-        onClick={handleSpain}
-      >
-        Spain
-      </button>
-      <button
-        className="py-3 hover:text-red-400 border"
-        type="button"
-        onClick={handleGreece}
-      >
-        Greece
-      </button>
-      <button
-        className="py-3 hover:text-red-400 border"
-        type="button"
-        onClick={handleOrganic}
-      >
-        Organic
-      </button>
-      <button
-        className="py-3 hover:text-red-400 border"
-        type="button"
-        onClick={handleFlavored}
-      >
-        Flavored
-      </button>
-      <button
-        className="py-3 hover:text-red-400 border"
-        type="button"
-        onClick={handleCooking}
-      >
-        For Cooking
-      </button>
-      <button
-        className="py-3 hover:text-red-400 border"
-        type="button"
-        onClick={handleInactiveItems}
-      >
-        Inactive
-      </button>
+      <div className="flex flex-col ">
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleAllProducts}
+        >
+            All Products
+        </button>
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleItaly}
+        >
+            Italy
+        </button>
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleSpain}
+        >
+            Spain
+        </button>
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleGreece}
+        >
+            Greece
+        </button>
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleOrganic}
+        >
+            Organic
+        </button>
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleFlavored}
+        >
+            Flavored
+        </button>
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleCooking}
+        >
+            For Cooking
+        </button>
+        <button
+            className="py-3 hover:text-red-400 border text-left px-3"
+            type="button"
+            onClick={handleInactiveItems}
+        >
+            Inactive
+        </button>
+      </div>
     </div>
   )
 }
