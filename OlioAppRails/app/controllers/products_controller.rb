@@ -3,9 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
-
-    render json: @products
+    render json: Product.all
   end
 
   # GET /products/1
@@ -15,8 +13,7 @@ class ProductsController < ApplicationController
 
   # POST /products
   def create
-    @product = Product.new(product_params)
-
+    product= Product.create!(product_params)
     render json: product, status: 201
   end
 
@@ -40,6 +37,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:region, :location, :name, :image_url, :description, :price, :organic, :flavored, :forcooking, :active)
+      params.permit(:region, :location, :name, :image_url, :description, :price, :organic, :flavored, :forcooking, :active)
     end
 end
