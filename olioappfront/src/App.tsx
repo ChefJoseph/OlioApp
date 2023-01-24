@@ -6,6 +6,7 @@ import AboutUs from "./pages/AboutUs"
 import Login from './pages/Login';
 import CreateAccountPage from './pages/Login/CreateAccountPage';
 import Admin from './pages/Admin'
+import AddProduct from './pages/Admin/AddProduct';
 
 function App() {
   const {
@@ -58,8 +59,9 @@ function App() {
     <Route path="*" element={<Home/>} />
     <Route path="/about" element={<AboutUs/>} />
     <Route path="/login" element={<Login />} />
-    <Route path="createAccount" element={<CreateAccountPage />} />
+    <Route path="createAccount" element={<CreateAccountPage/>} />
     <Route path="/admin" element={<Admin/>} />
+    <Route path="/addProduct" element={<AddProduct/>} />
     
   </Routes>
   );

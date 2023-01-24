@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import AdminNavBar from './AdminNavBar'
 import ProductCard from './ProductCard'
 import Footer from '../../CommonComponents/Footer'
+import { EmptyProductValue, IProduct } from '../../types/IProducts';
 
 function Admin() {
+    const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
     const [search, setSearch] = useState<string>('');
 
   return (
@@ -23,7 +25,7 @@ function Admin() {
                     />
                 </label>
             </div>
-        <ProductCard/>
+        <ProductCard productData={productData} setProductData={setProductData} search={search}/>
         <Footer/>
     </div>
   )
