@@ -25,7 +25,7 @@ const navigate = useNavigate()
             />
             </svg>
         </button>
-        <ul className="absolute hidden z-10 w-32 rounded-lg text-gray-700 bg-gray-200 pt-1 group-hover:block">
+        <ul className="absolute hidden z-10 w-40 rounded-lg text-gray-700 bg-gray-200 pt-1 group-hover:block">
           <li className="">
             <a className=" bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">
                 Regions

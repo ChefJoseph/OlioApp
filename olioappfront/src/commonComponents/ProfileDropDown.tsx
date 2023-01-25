@@ -41,10 +41,10 @@ return (
             />
             </svg>
         </button>
-        <ul className="absolute hidden rounded-lg rounded-b-lg w-40 bg-gray-200 z-10 text-gray-700 pt-1 group-hover:block">
+        <ul className="absolute hidden rounded-lg rounded-b-lg w-56 bg-gray-200 z-10 text-gray-700 pt-1 group-hover:block">
           <li className="">
             <a className=" bg-gray-200  py-2 px-4 block whitespace-no-wrap" href="#">
-                Welcome, 
+                Welcome, {user.first_name}
             </a>
           </li>
           <li className="">
