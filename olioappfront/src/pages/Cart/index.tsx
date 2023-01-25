@@ -33,15 +33,14 @@ function Cart() {
               <p className="">
                 Subtotal
                 <p className="float-right">${subtotal}</p>
-              </p>
-              
+              </p>     
             </div>
   {/* Checkout btn  */}
             <div>
               <button
                 type="button"
                 className=" text-center bg-slate-900 text-white mt-1 py-2 px-10 rounded-md hover:bg-slate-500 text-xl"
-                onClick={() => navigate('/#')}
+                onClick={() => navigate('/checkout')}
               >
                 CheckOut
               </button>
@@ -56,7 +55,6 @@ function Cart() {
         <div className="flex justify-start ml-10 mb-5">
           <p className="w-full text-3xl">No Items in Cart</p>
         </div>
-
       )
       }
 // If not logged in
@@ -80,7 +78,7 @@ function Cart() {
 {/* cartheaders */}
         <div id="cartheaders" className="container py-3 mr-4 my-5">
             <div id="cartheaders" className="text-3xl pl-10 border-b ">
-                <p className="pb-5">Shopping cart</p>
+                <p className="pb-5">Cart</p>
             </div>
         </div>
 {/* renderCartCards         */}

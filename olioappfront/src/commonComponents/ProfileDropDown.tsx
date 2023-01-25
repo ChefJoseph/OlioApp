@@ -41,34 +41,34 @@ return (
             />
             </svg>
         </button>
-        <ul className="absolute hidden rounded-lg rounded-b-lg w-56 bg-gray-200 z-10 text-gray-700 pt-1 group-hover:block">
+        <ul className="absolute hidden rounded-lg rounded-b-lg w-56 bg-gray-100 z-10 text-gray-700 pt-1 group-hover:block">
           <li className="">
-            <a className=" bg-gray-200  py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" font-medium py-2 px-4 block whitespace-no-wrap" href="#">
                 Welcome, {user.first_name}
             </a>
           </li>
           <li className="">
-            <a className=" bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
                 Your Account
             </a>
           </li>
           <li className="">
-            <a className=" bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
                 Orders & Returns
             </a>
           </li>
           <li className="">
-            <a className=" bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
                 Invite
             </a>
           </li>
           <li className="">
-            <a className=" bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
                 Help Center 
             </a>
           </li>
           <li className="">
-            <a className=" rounded-b-lg bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#" onClick={handleLogout}>
+            <a className=" rounded-b-lg hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#" onClick={handleLogout}>
                 Log Out
             </a>
           </li>

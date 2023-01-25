@@ -8,6 +8,7 @@ import CreateAccountPage from './pages/Login/CreateAccountPage';
 import Admin from './pages/Admin'
 import AddProduct from './pages/Admin/AddProduct';
 import Cart from './pages/Cart';
+import CheckoutPage from './pages/CheckoutPage';
 
 function App() {
   const {
@@ -64,6 +65,7 @@ function App() {
     <Route path="/admin" element={<Admin/>} />
     <Route path="/addProduct" element={<AddProduct/>} />
     <Route path="/cart" element={<Cart/>} />
+    <Route path="/checkout" element={<CheckoutPage/>} />
     
   </Routes>
   );
