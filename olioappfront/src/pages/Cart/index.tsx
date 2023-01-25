@@ -39,7 +39,7 @@ function Cart() {
             <div>
               <button
                 type="button"
-                className=" text-center bg-slate-900 text-white mt-1 py-2 px-10 rounded-md hover:bg-slate-500 text-xl"
+                className=" text-center bg-slate-800 text-white mt-1 py-2 px-10 rounded-md hover:bg-slate-500 text-xl"
                 onClick={() => navigate('/checkout')}
               >
                 CheckOut
@@ -62,7 +62,7 @@ function Cart() {
           <div className="w-1/6 text-center text-3xl" style={{ marginTop: '-10px' }}>
           <p className="text-lg">Log in to checkout</p>
           <button
-              className="bg-slate-900 text-white mt-1 py-2 px-10 rounded-md hover:bg-slate-800 text-xl"
+              className="bg-slate-800 text-white mt-1 py-2 px-10 rounded-md hover:bg-slate-500 text-xl"
               onClick={() => { navigate('/login'); }}
               type="button"
           >
