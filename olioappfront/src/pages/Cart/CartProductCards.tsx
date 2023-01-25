@@ -72,7 +72,7 @@ const renderCart = shoppingCart.map((product) => (
         </div>
 {/* Total Price  */}
         <div className="flex w-1/6 justify-center items-center text-lg">
-            <p>${product.price && product.quantity ? (product.price * product.quantity) : ''}</p>
+            <p>${product.price && product.quantity ? Number((product.price * product.quantity)).toFixed(2) : ''}</p>
         </div>
 {/* remove  */} 
         <div className="flex w-1/6 justify-center items-center text-lg">

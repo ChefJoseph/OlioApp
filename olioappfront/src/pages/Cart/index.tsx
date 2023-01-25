@@ -12,7 +12,7 @@ function Cart() {
   const handleRemoveAllItems = () => {
     setShoppingCart([]);
   };
-
+  const subtotalFix = Number(subtotal).toFixed(2)
 // eslint-disable-next-line consistent-return
   const renderCheckOut = () => {
       if (user.account_type === 'user' && cartTotalItems > 0) {
@@ -32,7 +32,7 @@ function Cart() {
             <div className="text-xl pb-2">
               <p className="">
                 Subtotal
-                <p className="float-right">${subtotal}</p>
+                <span className="float-right">${subtotalFix}</span>
               </p>     
             </div>
   {/* Checkout btn  */}
