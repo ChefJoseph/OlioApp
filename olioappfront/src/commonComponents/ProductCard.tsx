@@ -10,47 +10,49 @@ import { IShoppingCart } from '../types/IShoppingCart';
 interface Props {
   productData: any
   setProductData:React.Dispatch<React.SetStateAction<IProduct[]>>
-//   search:string
   product: any
 
 }
 
 function ProductCard({ product, productData, setProductData }: Props) {
-    const {
-        productItem, setProductItem, shoppingCart, setShoppingCart,
-      } = useContext(AuthContext);
-    const [addToCartNumber, setAddToCartNumber] = useState<number>(1);
-    const navigate = useNavigate();
+  const {
+      productItem, setProductItem, shoppingCart, setShoppingCart,
+    } = useContext(AuthContext);
+  const [addToCartNumber, setAddToCartNumber] = useState<number>(1);
+  const navigate = useNavigate();
 
-    const handleAddToCart = () => {
-   
-        const newShoppingCartItem: IShoppingCart = {
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image_url: product.image_url,
-        quantity: addToCartNumber,
-        };
-         // eslint-disable-next-line no-param-reassign
-        if (shoppingCart.find((cart) => cart.id === product.id)) {
-        const updateProductQuantity = shoppingCart.map((cart) => {
-            if (cart.id === product.id && cart.quantity) {
-            // eslint-disable-next-line no-param-reassign
-            cart.quantity += addToCartNumber;
-            return cart;
-            }
-            return cart;
-        });
-        setShoppingCart(updateProductQuantity);
-        } else {
-        setShoppingCart([...shoppingCart, newShoppingCartItem]);
-        }
-        console.log(shoppingCart)
+  const handleAddToCart = () => {
+    const newShoppingCartItem: IShoppingCart = {
+    id: product.id,
+    name: product.name,
+    price: product.price,
+    image_url: product.image_url,
+    quantity: addToCartNumber,
     };
+      // eslint-disable-next-line no-param-reassign
+    if (shoppingCart.find((cart) => cart.id === product.id)) {
+    const updateProductQuantity = shoppingCart.map((cart) => {
+        if (cart.id === product.id && cart.quantity) {
+        // eslint-disable-next-line no-param-reassign
+        cart.quantity += addToCartNumber;
+        return cart;
+        }
+        return cart;
+    });
+    setShoppingCart(updateProductQuantity);
+    } else {
+    setShoppingCart([...shoppingCart, newShoppingCartItem]);
+    }
+    console.log(shoppingCart)
+  };
 
-    const handleCardClick = (product: IProduct ) => {
+  const handleCardClick = (product: IProduct ) => {
     setProductItem(product);
-    navigate('/product');
+    navigate('/products');
+  };
+
+  const scrollToTop = () =>{
+    window.scrollTo(0, 0)
   };
 
   return (
@@ -59,7 +61,7 @@ function ProductCard({ product, productData, setProductData }: Props) {
       imgAlt="Olio Verde"
       imgSrc= {product.image_url}
       className="border-none shadow-none"
-      onClick={()=> {handleCardClick(product)}}
+      onClick={()=> {scrollToTop(); handleCardClick(product)}}
     >
       <a href="#">
         <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">

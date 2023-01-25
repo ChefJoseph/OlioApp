@@ -37,33 +37,29 @@ function NavBar() {
 			</button> */}
 		</div>
 
-		<div className="order-2 md:order-2 flex items-center text-gray-700" id="nav-content">
+		<div id="nav-content" className="order-2 md:order-2 flex text-gray-700" >
 {/*Profile*/}
-			<div >
+			<div className="px-2">
 				{user.account_type === 'user' ? <span
 				// onClick={() => navigate('/purchaseHistory')} 
-				className="py-5 hover:text-yellow-300 ">
+				className=" hover:text-yellow-300 ">
 				<ProfileDropDown/></span> 
 				: <div/>}
-			{/* Login/Out */}
-			{user.account_type === 'user' ? 
-			// <LogOutNavtab />
-			''
-			: <button type="button" onClick={() => navigate('/login')} className="py-5 px-10 font-semibold hover:text-yellow-300 transition duration-300">Log In</button>}
-		</div>
+                {/* Login/Out */}
+                {user.account_type === 'user' ? 
+                // <LogOutNavtab />
+                ''
+                : <button type="button" onClick={() => navigate('/login')} className="py-5 px-10 font-semibold hover:text-yellow-300 transition duration-300">Log In</button>}
+            </div>
 {/* Search */}
-			<button className="py-5 px-5 font-semibold hover:text-yellow-300 transition duration-300"> 
+			<button className="px-2 font-semibold hover:text-yellow-300 transition duration-300"> 
 				<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
 			</button>
 {/* Cart */}
-			<button type="button" onClick={() => navigate('/cart')} className=" hover:text-yellow-300 transition duration-300 relative flex" >
+			<button type="button" onClick={() => navigate('/cart')} className="pl-3 top-1 w-20px h-27px hover:text-yellow-300 transition duration-300 relative flex" >
 				{cartTotalItems > 0 ? (
-				<mark className="bg-red-600 absolute top-0 rounded-full w-4 h-4 top -right-1 p-0 m-0 text-white font-mono text-sm leading-tight text-center">{' '}{cartTotalItems}</mark>) : ''}
-				<svg className="fill-current flex-1 w-7 h-7 hover:text-yellow-300 " strokeWidth="1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-					<path d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
-					<circle cx="10.5" cy="18.5" r="1.5" />
-					<circle cx="17.5" cy="18.5" r="1.5" />
-				</svg>
+				<mark className="bg-transparent absolute top-2 w-5 h-5 m-0 text-white font-bold text-sm leading-tight text-center">{' '}{cartTotalItems}</mark>) : ''}
+				<svg aria-hidden="true" data-testid="shopping-bag-icon-desktop" fill="#374160" height="27" stroke="#000" viewBox="0 0 20 27" width="20" xmlns="http://www.w3.org/2000/svg" className="sitewide-0 e123k0v92"><path d="M0 6.4v18.1S0 27 2.5 27h15s2.5 0 2.5-2.5V6.4H0z" strokeWidth="0"></path><path d="M5.5 7.1S4.8 1 10 1c5 0 4.5 6.1 4.5 6.1" fill="none" strokeMiterlimit="10" strokeWidth="2"></path></svg>
 			</button>
 		</div>
     </div>
