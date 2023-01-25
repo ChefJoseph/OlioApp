@@ -9,10 +9,10 @@ function NavBar() {
   const navigate = useNavigate();
   const { user, cartTotalItems } = useContext(AuthContext);
 
-  console.log(user, "navbar")
+//   console.log(user, "navbar")
   return (
     <nav id="header" className="w-full z-30 top-0 py-1 sticky bg-white">
-    <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+    <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-5 py-3">
 		<div className="md:flex md:items-center order-1 md:order-1 " id="menu">
 			<nav>
 				<ul className="md:flex items-center justify-between text-base text-gray-700 md:pt-0">

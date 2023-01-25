@@ -9,6 +9,10 @@ import Admin from './pages/Admin'
 import AddProduct from './pages/Admin/AddProduct';
 import Cart from './pages/Cart';
 import CheckoutPage from './pages/CheckoutPage';
+import ShoppingPage from './pages/ShoppingPage'
+import ProductPage from './pages/ProductPage'
+import PurchaseHistory from './pages/PurchaseHistory'
+import EditProductPage from './pages/EditProductPage'
 
 function App() {
   const {
@@ -62,8 +66,13 @@ function App() {
     <Route path="/about" element={<AboutUs/>} />
     <Route path="/login" element={<Login />} />
     <Route path="createAccount" element={<CreateAccountPage/>} />
+    <Route path="/shopping" element={<ShoppingPage/>} />
+    <Route path="/product" element={<ProductPage/>} />
+    <Route path="/purchaseHistory" element={<PurchaseHistory/>} />
+
     <Route path="/admin" element={<Admin/>} />
     <Route path="/addProduct" element={<AddProduct/>} />
+    <Route path="/editProduct" element={<EditProductPage/>} />
     <Route path="/cart" element={<Cart/>} />
     <Route path="/checkout" element={<CheckoutPage/>} />
     

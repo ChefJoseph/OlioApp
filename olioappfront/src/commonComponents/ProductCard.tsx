@@ -23,6 +23,7 @@ function ProductCard({ product, productData, setProductData }: Props) {
     const navigate = useNavigate();
 
     const handleAddToCart = () => {
+   
         const newShoppingCartItem: IShoppingCart = {
         id: product.id,
         name: product.name,
@@ -47,13 +48,18 @@ function ProductCard({ product, productData, setProductData }: Props) {
         console.log(shoppingCart)
     };
 
+    const handleCardClick = (product: IProduct ) => {
+    setProductItem(product);
+    navigate('/product');
+  };
+
   return (
     <div className="max-w-xs max-h-xs mx-auto">
     <Card
       imgAlt="Olio Verde"
-
       imgSrc= {product.image_url}
       className="border-none shadow-none"
+      onClick={()=> {handleCardClick(product)}}
     >
       <a href="#">
         <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -117,7 +123,7 @@ function ProductCard({ product, productData, setProductData }: Props) {
           {product.price}
         </span>
         <button
-          onClick= {()=> handleAddToCart()}
+          onClick= {(e)=> {e.stopPropagation(); handleAddToCart()}}
           className="rounded-lg bg-gray-800 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           
         >
