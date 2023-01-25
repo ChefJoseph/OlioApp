@@ -11824,3 +11824,23 @@ Processing by SessionsController#show as */*
 Completed 200 OK in 63ms (Views: 25.2ms | ActiveRecord: 2.3ms | Allocations: 1900)
 
 
+Started GET "/me" for 127.0.0.1 at 2023-01-25 00:23:30 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (27.72ms)
+Completed 200 OK in 75ms (Views: 33.3ms | ActiveRecord: 7.0ms | Allocations: 2081)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 00:42:09 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (128.25ms)
+Completed 200 OK in 182ms (Views: 134.4ms | ActiveRecord: 9.3ms | Allocations: 2087)
+
+
