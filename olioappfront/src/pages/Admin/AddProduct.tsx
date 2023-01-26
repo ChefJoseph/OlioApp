@@ -57,15 +57,15 @@ function AddProduct() {
   return (
     <div>
         <AdminNavBar />
-        <div>
-            <h1>Add New Product</h1>
+        <div className="flex flex-col text-center justify-center items-center">
+            <h1 className="text-2xl mt-10">Add New Product</h1>
             {/* <p></p> */}
-            <div>
+            <div className="flex flex-col w-2/5 pt-0 shadow-lg rounded-lg px-6 py-5">
                 <form onSubmit={handleCreateNewProduct}>
-                    <p>Name</p>
+                    <p className="text-lg font-semibold my-1 text-left">Name</p>
                     <label>
                         <input
-                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          className="text-lg border py-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
                           type="text"
                           name="name"
                           placeholder="Name"
@@ -73,9 +73,9 @@ function AddProduct() {
                           onChange={(e) => setName(e.target.value)}
                         />
                     </label>
-                    <p>Region</p>
+                    <p className="text-lg font-semibold my-1 text-left" >Region</p>
                         <select
-                            className="w-full text-xl py-2 px-3 border cursor-default"
+                            className="w-full text-lg py-2 px-3 border cursor-default rounded-md"
                             value={region}
                             onChange={(e) => setRegion(e.target.value)}
                         >
@@ -84,10 +84,10 @@ function AddProduct() {
                             <option value="Spain">Spain</option>
                             <option value="Greece">Greece</option>
                         </select>
-                    <p>Location</p>
+                    <p className="text-lg font-semibold my-1 text-left">Location</p>
                     <label>
                         <input
-                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          className="text-lg border py-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
                           type="text"
                           name="location"
                           placeholder="Location"
@@ -95,9 +95,9 @@ function AddProduct() {
                           onChange={(e) => setLocation(e.target.value)}
                         />
                     </label>
-                    <p>Image</p>
+                    <p className="text-lg font-semibold my-1 text-left">Image</p>
                         <input
-                          className="ml-20 mt-1"
+                          className=""
                           type="file"
                           accept="image/*"
                           onChange={(e) => {
@@ -106,10 +106,10 @@ function AddProduct() {
                             }
                           }}            
                         />
-                    <p>Description</p>
+                    <p className="text-lg font-semibold my-1 text-left">Description</p>
                     <label>
                         <textarea
-                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          className="text-md border py-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
                           name="description"
                           placeholder="Add Description"
                           rows={2}
@@ -117,10 +117,10 @@ function AddProduct() {
                           onChange={(e) => setDescription(e.target.value)}
                         />
                     </label>
-                    <p>Price</p>
+                    <p className="text-lg font-semibold my-1 text-left">Price</p>
                     <label>
                         <input
-                          className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
+                          className="text-lg border py-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
                           type="number"
                           name="price"
                           placeholder="Price"
@@ -128,9 +128,9 @@ function AddProduct() {
                           onChange={(e) => setPrice(e.target.value)}
                         />
                     </label>
-                    <p>Organic</p>
+                    <p className="text-lg font-semibold my-1 text-left">Organic</p>
                         <select
-                          className="w-full text-xl py-2 px-3 border cursor-default"
+                          className="w-full text-lg py-2 px-3 border rounded-md cursor-default"
                           value={organic}
                           onChange={(e) => setOrganic(e.target.value)}
                         >
@@ -138,9 +138,9 @@ function AddProduct() {
                           <option value="true">Yes</option>
                           <option value="false">No</option>
                         </select>
-                    <p>Flavored</p>
+                    <p className="text-lg font-semibold my-1 text-left">Flavored</p>
                         <select
-                          className="w-full text-xl py-2 px-3 border cursor-default"
+                          className="w-full text-lg py-2 px-3 border rounded-md cursor-default"
                           value={flavored}
                           onChange={(e) => setFlavored(e.target.value)}
                         >
@@ -148,9 +148,9 @@ function AddProduct() {
                           <option value="true">Yes</option>
                           <option value="false">No</option>
                         </select>
-                    <p>For Cooking</p>
+                    <p className="text-lg font-semibold my-1 text-left">For Cooking</p>
                         <select
-                          className="w-full text-xl py-2 px-3 border cursor-default"
+                          className="w-full text-lg py-2 px-3 border rounded-md cursor-default"
                           value={forCooking}
                           onChange={(e) => setForCooking(e.target.value)}
                         >

@@ -30,12 +30,12 @@ function Admin() {
           <AdminSideBar setProductData={setProductData}/>
   {/* Search */}
           <div id="productshell" className="w-full">
-            <h1 className="text-5xl mt-5 text-center text-gray-800 ">Search Products</h1>
+            <h1 className="text-2xl mt-5 text-center text-gray-800 ">Search Products</h1>
             <div className="flex justify-center mb-10">
                 <label htmlFor="searchBar">
                     <input
-                        className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md mt-4"
-                        style={{ width: '600px' }}
+                        className="text-l border p-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md mt-4"
+                        style={{ width: '400px' }}
                         type="text"
                         name="searchbar"
                         placeholder="Search by Name"

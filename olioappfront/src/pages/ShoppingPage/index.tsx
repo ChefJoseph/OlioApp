@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 // import AuthContext from '../../AuthProvider';
 import NavBar from '../../CommonComponents/Navbar';
 import ProductCard from '../../CommonComponents/ProductCard';
-import AdminSideBar from '../Admin/AdminSideBar';
 import { EmptyProductValue, IProduct  } from '../../types/IProducts';
+import ShoppingSideBar from './ShoppingSideBar';
 
 
 function index() {
@@ -38,8 +38,19 @@ function index() {
   return (
     <div>
         <NavBar/>
-        <AdminSideBar setProductData={setProductData} />
-        {renderProducts}
+        <div className="flex row">
+            <ShoppingSideBar setProductData={setProductData} />
+            <div id="productshell" className="w-full">
+                <h1 className="text-2xl my-5 text-center text-gray-800 ">Search Products</h1>
+    {/* Products */}
+                <div id="productdiv" >
+                    <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-10 ">
+                        {renderProducts}
+                    </div>
+                
+                </div>
+            </div>
+        </div>
     </div>
   )
 }

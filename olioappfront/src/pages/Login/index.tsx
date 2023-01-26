@@ -57,10 +57,9 @@ function Login() {
       <NavBar />
         <div className="flex items-center justify-center m-10 mb-40">
           <div className="w-96">
-            <p className="text-5xl mb-5">Log In</p>
             <div className="shadow-md rounded-lg">
               <form onSubmit={handleLogin}>
-                <div className="h-3 bg-slate-900 rounded-t-md" />
+                <div className="h-3 bg-gray-800 rounded-t-md" />
                 <div className="px-7 pt-5 pb-3">
                   <p className="text-center text-red-500 text-lg">{errorMessage || null}</p>
                   <p className="text-lg font-semibold mb-2">Email</p>
@@ -97,7 +96,7 @@ function Login() {
                     <option value="admin">Admin</option>
                   </select>
                   <button
-                    className="bg-slate-900 text-white mt-6 py-3 px-6 rounded-md hover:bg-slate-800 w-full text-xl"
+                    className="bg-gray-800 text-white mt-6 py-3 px-6 rounded-md hover:bg-slate-800 w-full text-xl"
                     type="submit"
                   >
                     Log In

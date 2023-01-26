@@ -60,8 +60,8 @@ function CreateAccountPage() {
     <div className="mb-12">
   
       <div className="flex flex-col text-center justify-center items-center">
-        <h1 className="text-5xl mt-10">Create New Account</h1>
-        <p className="text-center text-red-500 text-lg my-5">
+        <h1 className="text-2xl mt-10">Create New Account</h1>
+        <p className="text-center text-red-500 text-lg ">
           {errorMessages ? errorMessages.map((error) => (
             <span key={error}>
               {error}
@@ -72,7 +72,7 @@ function CreateAccountPage() {
         </p>
         <div className="flex flex-col w-2/5 pt-0 shadow-lg rounded-lg px-6 py-5">
           <form onSubmit={handleSubmit}>
-            <p className="text-lg font-semibold mb-2 mt-7 text-left">First Name</p>
+            <p className="text-lg font-semibold mb-2 text-left">First Name</p>
             <label htmlFor="firstName">
               <input
                 className="text-xl border p-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md w-full"
@@ -137,7 +137,7 @@ function CreateAccountPage() {
               <option value="admin">Admin</option>
             </select>
             <button
-              className="bg-slate-900 text-white mt-6 py-3 px-6 rounded-md hover:bg-slate-800 w-full text-xl"
+              className="bg-gray-800 text-white mt-6 py-3 px-6 rounded-md hover:bg-gray-500 w-full text-xl"
               type="submit"
             >
               Create Account

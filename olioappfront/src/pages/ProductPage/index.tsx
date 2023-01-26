@@ -177,7 +177,6 @@ function ProductPage() {
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
-              <input type="reset" value="reset"/>
             </select>
             {/* {selectedOption && <h2 className="mt-30px">{selectedOption}</h2>} */}
           </div>

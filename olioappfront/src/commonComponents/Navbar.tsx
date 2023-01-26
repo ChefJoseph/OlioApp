@@ -49,7 +49,7 @@ function NavBar() {
                 {user.account_type === 'user' ? 
                 // <LogOutNavtab />
                 ''
-                : <button type="button" onClick={() => navigate('/login')} className="py-5 px-10 font-semibold hover:text-yellow-300 transition duration-300">Log In</button>}
+                : <button type="button" onClick={() => navigate('/login')} className="py-2 px-10 font-semibold hover:text-yellow-300 transition duration-300">Log In</button>}
             </div>
 {/* Search */}
 			<button className="px-2 font-semibold hover:text-yellow-300 transition duration-300"> 

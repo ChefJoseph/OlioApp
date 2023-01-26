@@ -4,7 +4,7 @@ interface Props {
     setProductData:React.Dispatch<React.SetStateAction<IProduct[]>>
   }
 
-function AdminSideBar({ setProductData }:Props) {
+function ShoppingSideBar({ setProductData }:Props) {
     const handleAllProducts = () => {
         fetch('/products')
           .then((res) => {
@@ -109,7 +109,7 @@ function AdminSideBar({ setProductData }:Props) {
       };
     
   return (
-    <div id="adminsidebar" className="flex flex-col w-1/5 text-2xl text-gray-800  mx-5 mt-5">
+    <div id="adminsidebar" className="flex flex-col w-1/5 text-xl text-gray-800  mx-5 mt-5">
       <p className="text-center text-white bg-gray-800  rounded-t-lg py-4 font-bold">Categories</p>
       <div className="flex flex-col ">
         <button
@@ -173,4 +173,4 @@ function AdminSideBar({ setProductData }:Props) {
   )
 }
 
-export default AdminSideBar
+export default ShoppingSideBar

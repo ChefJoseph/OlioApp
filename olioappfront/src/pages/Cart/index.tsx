@@ -19,7 +19,7 @@ function Cart() {
       return (
         <div className="flex justify-end">
           <div className="grid-col-1 my-5 mr-5">
-  {/* clearcart */}
+  {/* clear entire cart */}
             {/* <div >
               <button 
                   className="rounded-lg bg-gray-800 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
@@ -59,8 +59,9 @@ function Cart() {
       }
 // If not logged in
       return (
-          <div className="w-1/6 text-center text-3xl" style={{ marginTop: '-10px' }}>
-          <p className="text-lg">Log in to checkout</p>
+          <div className="flex justify-end">
+          <div className="w-1/6 text-center text-3xl grid-col-1 my-5 mr-5">
+          <p className="text-lg p-2">Log in to checkout</p>
           <button
               className="bg-slate-800 text-white mt-1 py-2 px-10 rounded-md hover:bg-slate-500 text-xl"
               onClick={() => { navigate('/login'); }}
@@ -68,6 +69,7 @@ function Cart() {
           >
               Log In
           </button>
+          </div>
           </div>
       );
   };

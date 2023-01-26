@@ -7,19 +7,19 @@ import { IShoppingCart, EmptyShoppingCartValue } from './types/IShoppingCart';
 const AuthContext = createContext({
   user: EmptyUserValue,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
-  setUser: (user: IUser) => {},
+  setUser: (_user: IUser) => {},
   productItem: EmptyProductValue,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
-  setProductItem: (productItem: IProduct) => {},
+  setProductItem: (_productItem: IProduct) => {},
   cartTotalItems: 0,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
-  setCartTotalItems: (cartTotalItems: number) => {},
+  setCartTotalItems: (_cartTotalItems: number) => {},
   subtotal: 0,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
-  setSubtotal: (subtotal: number) => {},
+  setSubtotal: (_subtotal: number) => {},
   shoppingCart: [EmptyShoppingCartValue],
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
-  setShoppingCart: (shoppingCart: IShoppingCart[]) => {},
+  setShoppingCart: (_shoppingCart: IShoppingCart[]) => {},
 });
 
 interface Props {
