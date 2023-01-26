@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../AuthProvider';
-
+import {BsChevronLeft} from 'react-icons/bs'
 import NavBar from '../../CommonComponents/Navbar';
 import Footer from '../../CommonComponents/Footer';
 import { IShoppingCart } from '../../types/IShoppingCart';
@@ -73,9 +73,11 @@ function ProductPage() {
       <button
         type="button"
         onClick={handleBackButton}
-        className="bg-slate-800 text-white py-2 ml-5 px-4 rounded-md hover:bg-slate-500 w-30 text-lg"
+        className="bg-slate-800 text-white py-1 ml-5 pl-2 pr-4 rounded-md hover:bg-slate-500 w-30 text-lg flex row"
       >
-        {`Back`}
+          <BsChevronLeft className="pt-2 text-xl"/>
+          Back
+
       </button>
       <div className="flex mt-10 px-20 mx-10 justify-center">
         <div className=" flex flex-col items-center w-1/2 mr-20">

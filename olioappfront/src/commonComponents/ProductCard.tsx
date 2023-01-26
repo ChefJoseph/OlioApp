@@ -126,9 +126,9 @@ function ProductCard({ product, productData, setProductData }: Props) {
         </span>
         <button
           onClick= {(e)=> {e.stopPropagation(); handleAddToCart()}}
-          className="rounded-lg bg-gray-800 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="rounded-lg h-8 w-8 bg-gray-800 px-1 py-1 text-center text-md font-medium text-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          Add to cart
+          +
         </button>
       </div>
     </Card>

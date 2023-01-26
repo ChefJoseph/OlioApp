@@ -21818,3 +21818,833 @@ Processing by ProductsController#index as */*
 Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 1.5ms | Allocations: 11318)
 
 
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:14:17 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (21.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (118.32ms)
+Completed 200 OK in 192ms (Views: 173.5ms | ActiveRecord: 32.7ms | Allocations: 11631)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf", "filename"=>"terrefrancescana"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (2.7ms) [0m[34mGenerated URL for file at key: vpexpthazdemu8mnzcztkc61q2no (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjIyWiIsInB1ciI6ImJsb2Jfa2V5In19--315ad22a0b9f05e8f397f64e292415ba436c9592/terrefrancescana.jpeg)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjIyWiIsInB1ciI6ImJsb2Jfa2V5In19--315ad22a0b9f05e8f397f64e292415ba436c9592/terrefrancescana.jpeg
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5f88800f3fb5f098bfc5ab6451f1db34bdfa5141/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+Completed 302 Found in 25ms (ActiveRecord: 0.2ms | Allocations: 2395)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891/primodop.png" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5f88800f3fb5f098bfc5ab6451f1db34bdfa5141", "filename"=>"IntenseFruity"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: d1gjc14p562j7miphbh6gpcf834s (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--6bf470fcfb46c155c3f4370e1b543021513ae691/IntenseFruity.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--6bf470fcfb46c155c3f4370e1b543021513ae691/IntenseFruity.png
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1241)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261", "filename"=>"toscanofranci"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (4.8ms) [0m[34mGenerated URL for file at key: arl2eayglkytebdzi1gjdq6vfrh9 (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--cf8f59a9342238d1532db2d77fe6819b6e07d22e/toscanofranci.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--cf8f59a9342238d1532db2d77fe6819b6e07d22e/toscanofranci.png
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 1241)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891", "filename"=>"primodop"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjIyWiIsInB1ciI6ImJsb2Jfa2V5In19--315ad22a0b9f05e8f397f64e292415ba436c9592/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 69asbi9txgpsfp5d7mbn35z2dcux (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjk2WiIsInB1ciI6ImJsb2Jfa2V5In19--42b0f9cccc64a62eba7b24694cfe95ea0ac2bfcd/primodop.png)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--6bf470fcfb46c155c3f4370e1b543021513ae691/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--cf8f59a9342238d1532db2d77fe6819b6e07d22e/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjk2WiIsInB1ciI6ImJsb2Jfa2V5In19--42b0f9cccc64a62eba7b24694cfe95ea0ac2bfcd/primodop.png
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 157)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+Completed 302 Found in 16ms (ActiveRecord: 0.2ms | Allocations: 2922)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IntenseFruity"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjk2WiIsInB1ciI6ImJsb2Jfa2V5In19--42b0f9cccc64a62eba7b24694cfe95ea0ac2bfcd/primodop.png" for 127.0.0.1 at 2023-01-25 23:14:18 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:14:39 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.43ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 1.5ms | Allocations: 1936)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:14:39 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (96.69ms)
+Completed 200 OK in 101ms (Views: 98.5ms | ActiveRecord: 2.4ms | Allocations: 11328)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--6bf470fcfb46c155c3f4370e1b543021513ae691/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:14:39 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--cf8f59a9342238d1532db2d77fe6819b6e07d22e/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:14:39 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjk2WiIsInB1ciI6ImJsb2Jfa2V5In19--42b0f9cccc64a62eba7b24694cfe95ea0ac2bfcd/primodop.png" for 127.0.0.1 at 2023-01-25 23:14:39 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjIyWiIsInB1ciI6ImJsb2Jfa2V5In19--315ad22a0b9f05e8f397f64e292415ba436c9592/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:14:39 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IntenseFruity"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 157)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:14:49 -0500
+Processing by ProductsController#index as */*
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:14:49 -0500
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+Processing by SessionsController#show as */*
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.02ms)
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 15.5ms | ActiveRecord: 2.0ms | Allocations: 5771)
+
+
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (69.6ms)
+Completed 200 OK in 77ms (Views: 73.1ms | ActiveRecord: 3.2ms | Allocations: 14049)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjUyWiIsInB1ciI6ImJsb2Jfa2V5In19--6bf470fcfb46c155c3f4370e1b543021513ae691/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:14:49 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IntenseFruity"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjIyWiIsInB1ciI6ImJsb2Jfa2V5In19--315ad22a0b9f05e8f397f64e292415ba436c9592/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:14:49 -0500
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjk2WiIsInB1ciI6ImJsb2Jfa2V5In19--42b0f9cccc64a62eba7b24694cfe95ea0ac2bfcd/primodop.png" for 127.0.0.1 at 2023-01-25 23:14:49 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MTk6MTguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--cf8f59a9342238d1532db2d77fe6819b6e07d22e/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:14:49 -0500
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 150)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 145)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69f4df02f981bd18dc60332243b60633375050a9/olioVerde.png" for 127.0.0.1 at 2023-01-25 23:20:30 -0500
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:20:30 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69f4df02f981bd18dc60332243b60633375050a9", "filename"=>"olioVerde"}
+Processing by ProductsController#index as */*
+  [1m[36mActiveStorage::Blob Load (2.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: vj92nwjdu9ofx8k8aa9ww9sav2o0 (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbW81TW01M2FtUjFPVzltZURock9HRmhPWGQzT1hOaGRqSnZNQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzAuOTE1WiIsInB1ciI6ImJsb2Jfa2V5In19--16ca39e5105abee9be3f3ecf481e8525ef9e0b87/olioVerde.png)[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbW81TW01M2FtUjFPVzltZURock9HRmhPWGQzT1hOaGRqSnZNQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzAuOTE1WiIsInB1ciI6ImJsb2Jfa2V5In19--16ca39e5105abee9be3f3ecf481e8525ef9e0b87/olioVerde.png
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 302 Found in 27ms (ActiveRecord: 6.8ms | Allocations: 2465)
+
+
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (2.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (82.33ms)
+Completed 200 OK in 113ms (Views: 102.2ms | ActiveRecord: 9.5ms | Allocations: 12978)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbW81TW01M2FtUjFPVzltZURock9HRmhPWGQzT1hOaGRqSnZNQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW05c2FXOVdaWEprWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjlzYVc5V1pYSmtaUzV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzAuOTE1WiIsInB1ciI6ImJsb2Jfa2V5In19--16ca39e5105abee9be3f3ecf481e8525ef9e0b87/olioVerde.png" for 127.0.0.1 at 2023-01-25 23:20:32 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"olioVerde"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5f88800f3fb5f098bfc5ab6451f1db34bdfa5141/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5f88800f3fb5f098bfc5ab6451f1db34bdfa5141", "filename"=>"IntenseFruity"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: d1gjc14p562j7miphbh6gpcf834s (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--452003b244ae09573579429a07760fba17f0bdb2/IntenseFruity.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--452003b244ae09573579429a07760fba17f0bdb2/IntenseFruity.png
+Processing by ProductsController#index as */*
+Completed 302 Found in 10ms (ActiveRecord: 0.1ms | Allocations: 2553)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf", "filename"=>"terrefrancescana"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261", "filename"=>"toscanofranci"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: arl2eayglkytebdzi1gjdq6vfrh9 (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--d1b8a4447b91ba2f58e72da13b4e2215dd3a7866/toscanofranci.png)[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--d1b8a4447b91ba2f58e72da13b4e2215dd3a7866/toscanofranci.png
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--452003b244ae09573579429a07760fba17f0bdb2/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 2019)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IntenseFruity"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: vpexpthazdemu8mnzcztkc61q2no (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjc4WiIsInB1ciI6ImJsb2Jfa2V5In19--a4202bbd950a21732024c5a593a7f44c31c9e485/terrefrancescana.jpeg)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjc4WiIsInB1ciI6ImJsb2Jfa2V5In19--a4202bbd950a21732024c5a593a7f44c31c9e485/terrefrancescana.jpeg
+Completed 302 Found in 27ms (ActiveRecord: 0.8ms | Allocations: 6038)
+
+
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--d1b8a4447b91ba2f58e72da13b4e2215dd3a7866/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjc4WiIsInB1ciI6ImJsb2Jfa2V5In19--a4202bbd950a21732024c5a593a7f44c31c9e485/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (66.07ms)
+Completed 200 OK in 85ms (Views: 81.5ms | ActiveRecord: 2.8ms | Allocations: 17891)
+
+
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 156)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891/primodop.png" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891", "filename"=>"primodop"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 69asbi9txgpsfp5d7mbn35z2dcux (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMzc4WiIsInB1ciI6ImJsb2Jfa2V5In19--5981f9cecc8e081124ecd2016d991b7a2b834f3c/primodop.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMzc4WiIsInB1ciI6ImJsb2Jfa2V5In19--5981f9cecc8e081124ecd2016d991b7a2b834f3c/primodop.png
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1241)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMzc4WiIsInB1ciI6ImJsb2Jfa2V5In19--5981f9cecc8e081124ecd2016d991b7a2b834f3c/primodop.png" for 127.0.0.1 at 2023-01-25 23:20:38 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:20:52 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.61ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 2.3ms | Allocations: 11328)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:20:54 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (60.5ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 2.4ms | Allocations: 11324)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:21:02 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (39.36ms)
+Completed 200 OK in 47ms (Views: 42.5ms | ActiveRecord: 4.3ms | Allocations: 11345)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:21:08 -0500
+Processing by ProductsController#index as */*
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:21:08 -0500
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Processing by SessionsController#show as */*
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.08ms)
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+Completed 200 OK in 23ms (Views: 16.1ms | ActiveRecord: 1.6ms | Allocations: 4302)
+
+
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (97.76ms)
+Completed 200 OK in 108ms (Views: 105.1ms | ActiveRecord: 2.7ms | Allocations: 14160)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjc4WiIsInB1ciI6ImJsb2Jfa2V5In19--a4202bbd950a21732024c5a593a7f44c31c9e485/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:21:08 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--d1b8a4447b91ba2f58e72da13b4e2215dd3a7866/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:21:08 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMzc4WiIsInB1ciI6ImJsb2Jfa2V5In19--5981f9cecc8e081124ecd2016d991b7a2b834f3c/primodop.png" for 127.0.0.1 at 2023-01-25 23:21:08 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:21:24 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:21:24 -0500
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.94ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 2356)
+
+
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (76.77ms)
+Completed 200 OK in 84ms (Views: 79.5ms | ActiveRecord: 4.0ms | Allocations: 11340)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjc4WiIsInB1ciI6ImJsb2Jfa2V5In19--a4202bbd950a21732024c5a593a7f44c31c9e485/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:21:24 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--452003b244ae09573579429a07760fba17f0bdb2/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:21:24 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IntenseFruity"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 240)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--d1b8a4447b91ba2f58e72da13b4e2215dd3a7866/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:21:24 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MjU6MzguMzc4WiIsInB1ciI6ImJsb2Jfa2V5In19--5981f9cecc8e081124ecd2016d991b7a2b834f3c/primodop.png" for 127.0.0.1 at 2023-01-25 23:21:24 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+Processing by SessionsController#show as */*
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (67.15ms)
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+Completed 200 OK in 142ms (Views: 110.1ms | ActiveRecord: 1.1ms | Allocations: 5331)
+
+
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.08ms)
+Completed 200 OK in 195ms (Views: 187.9ms | ActiveRecord: 6.2ms | Allocations: 13456)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf", "filename"=>"terrefrancescana"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (1.7ms) [0m[34mGenerated URL for file at key: vpexpthazdemu8mnzcztkc61q2no (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTE1WiIsInB1ciI6ImJsb2Jfa2V5In19--6c28aad245be241b65263bbed701b47e72b02d8d/terrefrancescana.jpeg)[0m
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTE1WiIsInB1ciI6ImJsb2Jfa2V5In19--6c28aad245be241b65263bbed701b47e72b02d8d/terrefrancescana.jpeg
+Completed 302 Found in 16ms (ActiveRecord: 0.1ms | Allocations: 1690)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891/primodop.png" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261", "filename"=>"toscanofranci"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (1.9ms) [0m[34mGenerated URL for file at key: arl2eayglkytebdzi1gjdq6vfrh9 (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTMzWiIsInB1ciI6ImJsb2Jfa2V5In19--0eefb45f8fca8074f0500d02b317daf4141c5856/toscanofranci.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTMzWiIsInB1ciI6ImJsb2Jfa2V5In19--0eefb45f8fca8074f0500d02b317daf4141c5856/toscanofranci.png
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891", "filename"=>"primodop"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (2.1ms) [0m[34mGenerated URL for file at key: 69asbi9txgpsfp5d7mbn35z2dcux (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTQzWiIsInB1ciI6ImJsb2Jfa2V5In19--5d25d9b1c419cb97426796198baf1671de802895/primodop.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTQzWiIsInB1ciI6ImJsb2Jfa2V5In19--5d25d9b1c419cb97426796198baf1671de802895/primodop.png
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 1241)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTE1WiIsInB1ciI6ImJsb2Jfa2V5In19--6c28aad245be241b65263bbed701b47e72b02d8d/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTMzWiIsInB1ciI6ImJsb2Jfa2V5In19--0eefb45f8fca8074f0500d02b317daf4141c5856/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6MzE6MDUuOTQzWiIsInB1ciI6ImJsb2Jfa2V5In19--5d25d9b1c419cb97426796198baf1671de802895/primodop.png" for 127.0.0.1 at 2023-01-25 23:26:05 -0500
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 903)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 166)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:34:29 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (38.51ms)
+Completed 200 OK in 98ms (Views: 42.9ms | ActiveRecord: 6.0ms | Allocations: 2090)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:35:19 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.1ms)
+Completed 200 OK in 24ms (Views: 15.9ms | ActiveRecord: 0.5ms | Allocations: 1896)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:35:41 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.19ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 1894)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:38:02 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.58ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 1887)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:39:10 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (26.41ms)
+Completed 200 OK in 107ms (Views: 33.3ms | ActiveRecord: 1.7ms | Allocations: 1899)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-01-25 23:40:23 -0500
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:40:23 -0500
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Processing by ProductsController#index as */*
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `show'
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (42.13ms)
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+Completed 200 OK in 59ms (Views: 43.4ms | ActiveRecord: 0.4ms | Allocations: 2935)
+
+
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (4.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (215.15ms)
+Completed 200 OK in 296ms (Views: 277.7ms | ActiveRecord: 17.3ms | Allocations: 12888)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:40:24 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:40:24 -0500
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e63f2eb6efb2dc672da7003a1a102dc5a41a8ecf", "filename"=>"terrefrancescana"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891/primodop.png" for 127.0.0.1 at 2023-01-25 23:40:24 -0500
+[36m  Disk Storage (1.9ms) [0m[34mGenerated URL for file at key: vpexpthazdemu8mnzcztkc61q2no (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzM0WiIsInB1ciI6ImJsb2Jfa2V5In19--38bdd5ccfc5c97188bebce0559a6226f114abd02/terrefrancescana.jpeg)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzM0WiIsInB1ciI6ImJsb2Jfa2V5In19--38bdd5ccfc5c97188bebce0559a6226f114abd02/terrefrancescana.jpeg
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1007f30fd1fc0aa3b009e066eee7d9eded3fd261", "filename"=>"toscanofranci"}
+Completed 302 Found in 16ms (ActiveRecord: 0.1ms | Allocations: 1711)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2daef4b917c295cced7bc88c73e26e33db6d891", "filename"=>"primodop"}
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: arl2eayglkytebdzi1gjdq6vfrh9 (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzU5WiIsInB1ciI6ImJsb2Jfa2V5In19--004634de9e448c53d441a075b2cd2aba78195616/toscanofranci.png)[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzU5WiIsInB1ciI6ImJsb2Jfa2V5In19--004634de9e448c53d441a075b2cd2aba78195616/toscanofranci.png
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: 69asbi9txgpsfp5d7mbn35z2dcux (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzY2WiIsInB1ciI6ImJsb2Jfa2V5In19--64d27b700cfc9dfd303c3cc8ee39eda267e4506e/primodop.png)[0m
+Completed 302 Found in 21ms (ActiveRecord: 0.3ms | Allocations: 2751)
+
+
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzY2WiIsInB1ciI6ImJsb2Jfa2V5In19--64d27b700cfc9dfd303c3cc8ee39eda267e4506e/primodop.png
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 1576)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbkJsZUhCMGFHRjZaR1Z0ZFRodGJucGplblJyWXpZeGNUSnVid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGNuSmxabkpoYm1ObGMyTmhibUV1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25kR1Z5Y21WbWNtRnVZMlZ6WTJGdVlTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzM0WiIsInB1ciI6ImJsb2Jfa2V5In19--38bdd5ccfc5c97188bebce0559a6226f114abd02/terrefrancescana.jpeg" for 127.0.0.1 at 2023-01-25 23:40:24 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"terrefrancescana"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEpzTW1WaGVXZHNhM2wwWldKa2Vta3haMnBrY1RaMlpuSm9PUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SdmMyTmhibTltY21GdVkya3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkMGIzTmpZVzV2Wm5KaGJtTnBMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzU5WiIsInB1ciI6ImJsb2Jfa2V5In19--004634de9e448c53d441a075b2cd2aba78195616/toscanofranci.png" for 127.0.0.1 at 2023-01-25 23:40:24 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"toscanofranci"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOamxoYzJKcE9YUjRaM0J6Wm5BMVpEZHRZbTR6TlhveVpHTjFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CeWFXMXZaRzl3TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jSEpwYlc5a2IzQXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MjQuMzY2WiIsInB1ciI6ImJsb2Jfa2V5In19--64d27b700cfc9dfd303c3cc8ee39eda267e4506e/primodop.png" for 127.0.0.1 at 2023-01-25 23:40:24 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"primodop"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms | Allocations: 722)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-01-25 23:40:30 -0500
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image_url"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:5:in `image_url'
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/product_serializer.rb:6:in `image_url'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (45.59ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 2.3ms | Allocations: 11328)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5f88800f3fb5f098bfc5ab6451f1db34bdfa5141/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:40:30 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5f88800f3fb5f098bfc5ab6451f1db34bdfa5141", "filename"=>"IntenseFruity"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: d1gjc14p562j7miphbh6gpcf834s (http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MzAuMTUwWiIsInB1ciI6ImJsb2Jfa2V5In19--a93e5d1f7fc790d1a43b1d0d89ea57789e73d641/IntenseFruity.png)[0m
+Redirected to http://localhost:4000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MzAuMTUwWiIsInB1ciI6ImJsb2Jfa2V5In19--a93e5d1f7fc790d1a43b1d0d89ea57789e73d641/IntenseFruity.png
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1241)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaREZuYW1NeE5IQTFOakpxTjIxcGNHaGlhRFpuY0dObU9ETTBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsdWRHVnVjMlZHY25WcGRIa3VjRzVuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkSmJuUmxibk5sUm5KMWFYUjVMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjMtMDEtMjZUMDQ6NDU6MzAuMTUwWiIsInB1ciI6ImJsb2Jfa2V5In19--a93e5d1f7fc790d1a43b1d0d89ea57789e73d641/IntenseFruity.png" for 127.0.0.1 at 2023-01-25 23:40:30 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IntenseFruity"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 155)
+
+
