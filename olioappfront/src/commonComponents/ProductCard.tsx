@@ -58,12 +58,7 @@ function ProductCard({ product, productData, setProductData }: Props) {
 
   return (
     <div className="max-w-xs max-h-xs mx-auto">
-    <Card
-      // imgAlt="Olio Verde"
-      // imgSrc= {product.image_url}
-      // className="object-cover"
-      // onClick={()=> {scrollToTop(); handleCardClick(product)}}
-    >
+    <Card>
       <div className="">
         <img
         src={product.image_url}
@@ -78,7 +73,7 @@ function ProductCard({ product, productData, setProductData }: Props) {
           {product.name}
         </h3>
         <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
-          {product.region}
+          {product.location}
         </h3>
         {/* <h4 className="h-20 overflow-hidden bg-gradient-to-b from-transparent to-gray-100">
             {product.description}
@@ -130,26 +125,28 @@ function ProductCard({ product, productData, setProductData }: Props) {
         </span>
       </div>
       <div className="flex justify-between ">
-        <span className="text-lg m-2 font-bold text-gray-900 dark:text-white">
+        <span className="text-lg py-2 font-bold text-gray-900 dark:text-white">
           {product.price}
         </span>
-        <strong>
-            <mark className="text-red-500 bg-white ">
+        <strong className="py-2">
+            <mark className="text-red-500 font-medium bg-white ">
               {product.active === false ? 'Out of Stock' : ''}
             </mark>
         </strong>
-        {product.active === true ? (
-        <button
-          onClick= {(e)=> {e.stopPropagation(); handleAddToCart()}}
-          className="flex relative rounded-lg h-50px w-50px px-1 py-1 text-center text-md font-medium text-white focus:outline-none focus:ring-4 group-hover:bg-yellow-300 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-        <div className="absolute mt-3 ml-4 ">
-          <IoMdAddCircle className="bg-transparent text-2xl" fill="#000"/>
+        <div className="rounded-lg hover:bg-yellow-300 active:bg-yellow-100">
+          {product.active === true ? (
+          <button
+            onClick= {(e)=> {e.stopPropagation(); handleAddToCart()}}
+            className="flex relative rounded-lg h-50px w-50px px-1 py-1 text-center text-md font-medium text-white  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+          <div className="absolute mt-3 ml-2">
+            <IoMdAddCircle className="bg-transparent text-2xl " fill="#000"/>
+          </div>
+          <svg aria-hidden="true" data-testid="shopping-bag-icon-desktop" fill="#c9cbcf" height="35" stroke="#000" viewBox="0 0 20 27" width="30" xmlns="http://www.w3.org/2000/svg" className="sitewide-0 e123k0v92 "><path d="M0 6.4v18.1S0 27 2.5 27h15s2.5 0 2.5-2.5V6.4H0z" strokeWidth="0"></path><path d="M5.5 7.1S4.8 1 10 1c5 0 4.5 6.1 4.5 6.1" fill="none" strokeMiterlimit="10" strokeWidth="2"></path></svg>
+          
+          </button>
+          ):''}
         </div>
-         <svg aria-hidden="true" data-testid="shopping-bag-icon-desktop" fill="#c9cbcf" height="35" stroke="#000" viewBox="0 0 20 27" width="30" xmlns="http://www.w3.org/2000/svg" className="sitewide-0 e123k0v92 hover:fill-yellow-300 "><path d="M0 6.4v18.1S0 27 2.5 27h15s2.5 0 2.5-2.5V6.4H0z" strokeWidth="0"></path><path d="M5.5 7.1S4.8 1 10 1c5 0 4.5 6.1 4.5 6.1" fill="none" strokeMiterlimit="10" strokeWidth="2"></path></svg>
-         
-        </button>
-        ):''}
       </div>
     </Card>
   </div>

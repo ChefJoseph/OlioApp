@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 // import AuthContext from '../../AuthProvider';
 import NavBar from '../../CommonComponents/Navbar';
+import Footer from '../../CommonComponents/Footer';
 import ProductCard from '../../CommonComponents/ProductCard';
 import { EmptyProductValue, IProduct  } from '../../types/IProducts';
 import ShoppingSideBar from './ShoppingSideBar';
@@ -38,7 +39,7 @@ function index() {
   return (
     <div>
         <NavBar/>
-        <div className="flex row">
+        <div className="flex row mt-5 mb-10">
             <ShoppingSideBar setProductData={setProductData} />
             <div id="productshell" className="w-full mt-5 mr-5">
                 {/* <h1 className="text-2xl my-5 text-center text-gray-800 ">Search Products</h1> */}
@@ -51,6 +52,7 @@ function index() {
                 </div>
             </div>
         </div>
+        <Footer/>
     </div>
   )
 }

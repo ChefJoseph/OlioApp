@@ -97,6 +97,7 @@ function ProductPage() {
           className="text-2xl"
         >
           {productItem.name}
+        </p>
           <span>
             <strong>
               <mark className="text-red-500 bg-white">
@@ -104,7 +105,7 @@ function ProductPage() {
               </mark>
             </strong>
           </span>
-        </p>
+        
   {/* Review stars  */}
         <div className="mt-2.5 mb-5 flex justify-start items-center">
           <svg
@@ -151,7 +152,15 @@ function ProductPage() {
           5.0
           </span>
         </div>
-        <p className="text-4xl mt-5">${productItem.price!}</p>
+        
+        {productItem.active === true ? (
+          <p className="text-2xl mt-5">
+            ${productItem.price!}</p>
+          ) : (<p className="text-2xl mt-5 line-through">
+          $ {productItem.price!}</p>
+          )
+        }
+
         <div className="flex justify-start mt-5">
   {/* -/+ adjust quantity                */}
                   {/* {productItem.active === true ? (

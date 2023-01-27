@@ -3,7 +3,7 @@ import learn from '../../assets/learn.png'
 
 function LearnOliveOil() {
   return (
-    <div className="container py-16 mx-auto " >
+    <div className="container py-16 px-5 mx-auto " >
         <h2 className="text-2xl font-medium text-gray-700 mb-6">
             Learn About Olive Oil
         </h2>

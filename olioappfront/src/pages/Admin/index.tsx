@@ -24,9 +24,9 @@ function Admin() {
     }, []);
 
   return (
-    <div id= "index" className="mb-6">
+    <div id= "index" className="">
         <AdminNavBar/>
-        <div id="adminbody" className="flex row ">
+        <div id="adminbody" className="flex row mt-5 mb-10">
           <AdminSideBar setProductData={setProductData}/>
   {/* Search */}
           <div id="productshell" className="w-full">
