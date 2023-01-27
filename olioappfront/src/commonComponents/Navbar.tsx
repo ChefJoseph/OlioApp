@@ -11,8 +11,8 @@ function NavBar() {
 
 //   console.log(user, "navbar")
   return (
-    <nav id="header" className="w-full z-30 top-0 py-1 sticky bg-white">
-    <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-5 py-3">
+    <nav id="header" className="w-full inline-block z-30 top-0 py-1 sticky bg-white">
+    <div className="w-full flex flex-wrap items-center justify-between mt-0 px-5 py-3">
 		<div className="md:flex md:items-center order-1 md:order-1 " id="menu">
 			<nav>
 				<ul className="md:flex items-center justify-between text-base text-gray-700 md:pt-0">
@@ -40,13 +40,13 @@ function NavBar() {
 		<div id="nav-content" className="order-2 md:order-2 flex text-gray-700" >
 {/*Profile*/}
 			<div className="px-2">
-				{user.account_type === 'user' ? <span
+				{(user.account_type === 'admin')||(user.account_type === 'user') ? <span
 				// onClick={() => navigate('/purchaseHistory')} 
 				className=" hover:text-yellow-300 ">
 				<ProfileDropDown/></span> 
 				: <div/>}
                 {/* Login/Out */}
-                {user.account_type === 'user' ? 
+                {(user.account_type === 'admin')||(user.account_type === 'user') ? 
                 // <LogOutNavtab />
                 ''
                 : <button type="button" onClick={() => navigate('/login')} className="py-2 px-10 font-semibold hover:text-yellow-300 transition duration-300">Log In</button>}

@@ -41,7 +41,7 @@ const handleCartAdd = (product:IShoppingCart) => {
   };
 
 const renderCart = shoppingCart.map((product) => (
-    <div id="cartmaprender" key={product.id} className="flex items-center border-b py-3 mx-10">
+    <div id="cartmaprender" key={product.id} className="flex items-center border-b mx-10">
 {/* Image         */}
         <div className="flex w-1/6 justify-center" >
             <img

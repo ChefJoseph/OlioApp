@@ -11,7 +11,7 @@ function ShoppingSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allProducts = data.filter((item:IProduct) => item.active === true);
+                  const allProducts = data
                   setProductData(allProducts);
                 });
             }
@@ -95,18 +95,6 @@ function ShoppingSideBar({ setProductData }:Props) {
             }
           });
       };
-      const handleInactiveItems = () => {
-        fetch('/products')
-          .then((res) => {
-            if (res.ok) {
-              res.json()
-                .then((data) => {
-                  const allInactive = data.filter((item:IProduct) => item.active === false);
-                  setProductData(allInactive);
-                });
-            }
-          });
-      };
     
   return (
     <div id="adminsidebar" className="flex flex-col w-1/5 text-xl text-gray-800  mx-5 mt-5">
@@ -160,13 +148,6 @@ function ShoppingSideBar({ setProductData }:Props) {
             onClick={handleCooking}
         >
             For Cooking
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
-            type="button"
-            onClick={handleInactiveItems}
-        >
-            Inactive
         </button>
       </div>
     </div>

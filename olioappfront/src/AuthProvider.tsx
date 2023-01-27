@@ -6,24 +6,19 @@ import { IShoppingCart, EmptyShoppingCartValue } from './types/IShoppingCart';
 
 const AuthContext = createContext({
   user: EmptyUserValue,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
   setUser: (_user: IUser) => {},
   productItem: EmptyProductValue,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
   setProductItem: (_productItem: IProduct) => {},
   cartTotalItems: 0,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
   setCartTotalItems: (_cartTotalItems: number) => {},
   subtotal: 0,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
   setSubtotal: (_subtotal: number) => {},
   shoppingCart: [EmptyShoppingCartValue],
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
   setShoppingCart: (_shoppingCart: IShoppingCart[]) => {},
 });
 
 interface Props {
-  children: ReactNode;
+  children: JSX.Element|JSX.Element[];
 }
 
 export function AuthProvider({ children }:Props) {

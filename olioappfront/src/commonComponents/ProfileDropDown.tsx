@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-// import {Dropdown} from 'flowbite-react'
-// import { truncate } from 'fs/promises';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../AuthProvider';
 
@@ -20,6 +18,19 @@ function ProfileDropDown() {
       navigate('/login');
     };
 
+console.log(user)
+
+    const renderAdminLink = () => {
+      if (user.account_type =='admin') {
+        return (
+          <li className="">
+            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="/admin">
+                Admin Portal
+            </a>
+          </li>
+        )
+      }
+    }
     
 return (
     <div>
@@ -47,6 +58,8 @@ return (
                 Welcome, {user.first_name}
             </a>
           </li>
+          <div>{renderAdminLink()}</div>
+          
           <li className="">
             <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
                 Your Account

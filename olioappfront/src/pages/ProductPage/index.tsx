@@ -97,11 +97,13 @@ function ProductPage() {
           className="text-2xl"
         >
           {productItem.name}
-          <strong>
-            <mark className="text-red-500 bg-white">
-              {productItem.active === false ? ' - Out Of Stock' : ''}
-            </mark>
-          </strong>
+          <span>
+            <strong>
+              <mark className="text-red-500 bg-white">
+                {productItem.active === false ? 'Out Of Stock' : ''}
+              </mark>
+            </strong>
+          </span>
         </p>
   {/* Review stars  */}
         <div className="mt-2.5 mb-5 flex justify-start items-center">
@@ -173,8 +175,8 @@ function ProductPage() {
                   ) : ''} */}
   {/* Quantity dropdown  */}
           <div className="mt-50px flex flex-col-1">
-            <select onChange={selectChange} className="">
-              <option selected value="1">1</option>
+            <select onChange={selectChange} defaultValue={1}className="">
+              <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>

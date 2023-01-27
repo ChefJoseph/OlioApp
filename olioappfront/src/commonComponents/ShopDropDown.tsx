@@ -32,7 +32,7 @@ const navigate = useNavigate()
             </a>
           </li>
           <li className="">
-            <button className=" hover:bg-gray-300 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/products')}>
+            <button className=" hover:bg-gray-300 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping')}>
                 Italy
             </button>
           </li>

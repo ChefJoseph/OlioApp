@@ -32,12 +32,12 @@ function FeaturedProduct() {
   )
 
   return (
-    <div className="container py-16 mx-auto" >
+    <div className="w-full py-16" >
 		<div >
 			<h2 className="text-2xl font-medium text-gray-700 mb-6">
             Featured product
 			</h2>
-			<div className="flex flex-row ">
+			<div className="grid lg:grid-cols-3 sm:grid-cols-2 ">
 				{renderProducts}
 			</div> 	
 		</div>  

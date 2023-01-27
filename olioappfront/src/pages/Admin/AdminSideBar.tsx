@@ -11,7 +11,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allProducts = data.filter((item:IProduct) => item.active === true);
+                  const allProducts = data;
                   setProductData(allProducts);
                 });
             }
