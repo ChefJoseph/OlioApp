@@ -109,64 +109,57 @@ function AdminSideBar({ setProductData }:Props) {
       };
     
   return (
-    <div id="adminsidebar" className="flex flex-col w-1/5 text-lg text-gray-800  mx-5 mt-5">
-      <p className="text-center text-white bg-gray-800  rounded-t-lg py-4 font-bold">Categories</p>
-      <div className="flex flex-col ">
+    <div id="adminsidebar" className="flex flex-col w-1/5 text-lg text-gray-800  mx-5 mt-3">
+     <p className="text-left text-xl px-3 py-3 text-gray-800  rounded-t-lg font-semibold">Categories</p>
+      <div className="flex flex-col">
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleAllProducts}
         >
             All Products
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleItaly}
         >
             Italy
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleSpain}
         >
             Spain
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleGreece}
         >
             Greece
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleOrganic}
         >
             Organic
         </button>
         <button
-            className="py-3 hover:bg-gray-200  border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleFlavored}
         >
             Flavored
         </button>
         <button
-            className="py-3 hover:bg-gray-200  border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleCooking}
         >
             For Cooking
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
-            type="button"
-            onClick={handleInactiveItems}
-        >
-            Inactive
         </button>
       </div>
     </div>

@@ -22,7 +22,7 @@ function NavBar() {
 					</li>
 {/* About */}
 					<li className="hidden md:flex" >
-						<button className="inline-block no-underline hover:text-yellow-300 font-medium py-2 px-4"  type="button" onClick={() => navigate('/about')} >About</button>
+						<button className="inline-block no-underline hover:text-yellow-300 font-normal py-2 px-4"  type="button" onClick={() => navigate('/about')} >About</button>
 					</li>
 				</ul>
 			</nav>
@@ -30,7 +30,7 @@ function NavBar() {
 {/* Company Name */}
 		<div className="order-1 md:order-2">
 			<a href="/#" className="flex items-center">
-				<span className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-4xl ">OLIO</span>
+				<span className="flex items-center tracking-wide no-underline hover:no-underline font-medium text-gray-800 text-4xl ">o l i o</span>
 			</a>
 			{/* <button className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-3xl " type="button" onClick={() => navigate('/home')}>
 				OLIO

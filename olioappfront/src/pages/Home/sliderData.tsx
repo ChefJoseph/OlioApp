@@ -1,8 +1,9 @@
+
 export const sliderData = [
     {
         h3: "Let the right people know you're open to work",
         h4: "With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.",
-        image: "https://www.tributemedia.com/hubfs/shutterstock_252081805%20(1).webp"
+        image: "../../assets/tuscanyHero.png"
     },
     {
         h3: "Conversations today could lead to opportunity tomorrow",

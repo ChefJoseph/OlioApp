@@ -11,8 +11,15 @@ import Cart from './pages/Cart';
 import CheckoutPage from './pages/CheckoutPage';
 import ShoppingPage from './pages/ShoppingPage'
 import ProductPage from './pages/ProductPage'
-import PurchaseHistory from './pages/PurchaseHistory'
+import OrderHistory from './pages/OrderHistory'
 import EditProductPage from './pages/EditProductPage'
+import Italian from './pages/ShoppingPage/Italian';
+import Spain from './pages/ShoppingPage/Spain';
+import Greece from './pages/ShoppingPage/Greece';
+import Organic from './pages/ShoppingPage/Organic';
+import Flavored from './pages/ShoppingPage/Flavored';
+import ForCooking from './pages/ShoppingPage/ForCooking';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const {
@@ -68,7 +75,13 @@ function App() {
       <Route path="createAccount" element={<CreateAccountPage/>} />
       <Route path="/shopping" element={<ShoppingPage/>} />
       <Route path="/products" element={<ProductPage/>} />
-      <Route path="/purchaseHistory" element={<PurchaseHistory/>} />
+      <Route path="/shopping/italian" element={<Italian/>}/>
+      <Route path="/shopping/spain" element={<Spain/>}/>
+      <Route path="/shopping/greece" element={<Greece/>}/>
+      <Route path="/shopping/organic" element={<Organic/>}/>
+      <Route path="/shopping/flavored" element={<Flavored/>}/>
+      <Route path="/shopping/forcooking" element={<ForCooking/>}/>
+      <Route path="/orderHistory" element={<OrderHistory/>} />
 
       <Route path="/admin" element={<Admin/>} />
       <Route path="/addProduct" element={<AddProduct/>} />

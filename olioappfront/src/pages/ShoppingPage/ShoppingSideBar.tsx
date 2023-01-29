@@ -1,10 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { IProduct } from '../../types/IProducts';
 interface Props {
     setProductData:React.Dispatch<React.SetStateAction<IProduct[]>>
   }
 
 function ShoppingSideBar({ setProductData }:Props) {
+  const navigate = useNavigate();
+
     const handleAllProducts = () => {
         fetch('/products')
           .then((res) => {
@@ -13,6 +16,7 @@ function ShoppingSideBar({ setProductData }:Props) {
                 .then((data) => {
                   const allProducts = data
                   setProductData(allProducts);
+                  navigate('/shopping')
                 });
             }
           });
@@ -24,8 +28,9 @@ function ShoppingSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allItaly = data.filter((item:IProduct) => item.active === true && item.region === 'Italy');
+                  const allItaly = data.filter((item:IProduct) => item.region === 'Italy');
                   setProductData(allItaly);
+                  navigate('/shopping/italian')
                 });
             }
           });
@@ -37,8 +42,9 @@ function ShoppingSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allSpain = data.filter((item:IProduct) => item.active === true && item.region=== 'Spain');
+                  const allSpain = data.filter((item:IProduct) =>  item.region=== 'Spain');
                   setProductData(allSpain);
+                  navigate('/shopping/spain')
                 });
             }
           });
@@ -50,8 +56,9 @@ function ShoppingSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allGreece = data.filter((item:IProduct) => item.active === true && item.region === 'Greece');
+                  const allGreece = data.filter((item:IProduct) =>  item.region === 'Greece');
                   setProductData(allGreece);
+                  navigate('/shopping/greece')
                 });
             }
           });
@@ -63,8 +70,9 @@ function ShoppingSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allOrganic = data.filter((item:IProduct) => item.active === true && item.organic === true);
+                  const allOrganic = data.filter((item:IProduct) => item.organic === true);
                   setProductData(allOrganic);
+                  navigate('/shopping/organic')
                 });
             }
           });
@@ -76,8 +84,9 @@ function ShoppingSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allFlavored = data.filter((item:IProduct) => item.active === true && item.flavored === true);
+                  const allFlavored = data.filter((item:IProduct) =>  item.flavored === true);
                   setProductData(allFlavored);
+                  navigate('/shopping/flavored')
                 });
             }
           });
@@ -89,61 +98,62 @@ function ShoppingSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allCooking = data.filter((item:IProduct) => item.active === true && item.forcooking === true);
+                  const allCooking = data.filter((item:IProduct) =>  item.forcooking === true);
                   setProductData(allCooking);
+                  navigate('/shopping/forcooking')
                 });
             }
           });
       };
     
   return (
-    <div id="adminsidebar" className="flex flex-col w-1/5 text-xl text-gray-800  mx-5 mt-5">
-      <p className="text-center text-white bg-gray-800  rounded-t-lg py-4 font-bold">Categories</p>
-      <div className="flex flex-col ">
+    <div id="sidebar" className="flex flex-col w-1/5 text-lg text-gray-800  mx-5 mt-4">
+      <p className="text-left text-xl px-3 pb-3 text-gray-800  rounded-t-lg font-semibold">Categories</p>
+      <div className="flex flex-col">
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleAllProducts}
         >
             All Products
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleItaly}
         >
             Italy
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleSpain}
         >
             Spain
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleGreece}
         >
             Greece
         </button>
         <button
-            className="py-3 hover:bg-gray-200 border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleOrganic}
         >
             Organic
         </button>
         <button
-            className="py-3 hover:bg-gray-200  border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleFlavored}
         >
             Flavored
         </button>
         <button
-            className="py-3 hover:bg-gray-200  border text-left px-3"
+            className="py-3 hover:bg-gray-200 text-left px-3"
             type="button"
             onClick={handleCooking}
         >

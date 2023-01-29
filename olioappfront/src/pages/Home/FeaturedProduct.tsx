@@ -35,7 +35,7 @@ function FeaturedProduct() {
     <div className="max-w-auto max-h-auto py-16 pl-5" >
 		<div className="">
 			<h2 className="text-2xl font-medium text-gray-700 mb-6">
-            Featured product
+            Featured products
 			</h2>
 			<div className="w-4/5 mx-auto grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
 				{renderProducts}

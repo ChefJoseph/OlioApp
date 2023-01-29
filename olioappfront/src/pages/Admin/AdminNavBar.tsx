@@ -9,7 +9,7 @@ function AdminNavBar() {
             <ul className="w-full flex flex-wrap justify-between">
                 <div className="">
                     <button onClick={() => navigate('/home')} className="flex items-center py-4 px-10">
-                        <span className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-white text-4xl hover:text-yellow-300 transition duration-300">OLIO</span>
+                        <span className="flex items-center tracking-wide no-underline hover:no-underline font-medium text-white text-4xl hover:text-yellow-300 transition duration-300">o l i o</span>
                     </button>
                 </div>
                 <div className="flex lg:flex-row ">

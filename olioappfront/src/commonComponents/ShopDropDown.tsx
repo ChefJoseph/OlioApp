@@ -13,7 +13,7 @@ const navigate = useNavigate()
     {/* <!-- Dropdown menu --> */}
     <div className="">
       <div className="group inline-block relative">
-        <button className="py-2 font-medium rounded inline-flex items-center">
+        <button className="py-2 font-normal rounded inline-flex items-center">
             Shopping
             <svg
             className="fill-current h-4 w-4"

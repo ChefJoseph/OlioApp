@@ -8,6 +8,11 @@ import { EmptyProductValue, IProduct  } from '../../types/IProducts';
 import ShoppingSideBar from './ShoppingSideBar';
 
 
+interface Props {
+  region: string;
+  productData:IProduct[]
+}
+
 function index() {
     const navigate = useNavigate();
     const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
@@ -36,6 +41,16 @@ function index() {
   )
   )
 
+  // const ShowHero = (productData: Props)  => {
+  //   if (productData.region === 'Italy') {
+  //   }
+  //   return(
+  //     <div>
+  //       Herooo
+  //     </div>
+  //   )
+  // }
+
   return (
     <div>
         <NavBar/>
@@ -44,6 +59,9 @@ function index() {
             <div id="productshell" className="w-full mt-5 mr-5">
                 {/* <h1 className="text-2xl my-5 text-center text-gray-800 ">Search Products</h1> */}
     {/* Products */}
+                <div>
+    {/* Hero  */}
+                </div>
                 <div id="productdiv" >
                     <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 ">
                         {renderProducts}
