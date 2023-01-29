@@ -99,7 +99,7 @@ function Login() {
                     className="bg-gray-800 text-white mt-6 py-3 px-6 rounded-md hover:bg-slate-800 w-full text-xl"
                     type="submit"
                   >
-                    Log In
+                    Login
                   </button>
                 </div>
               </form>
@@ -109,7 +109,7 @@ function Login() {
                   type="button"
                   onClick={() => navigate('/createAccount')}
                 >
-                  No account? Register here
+                  Don&apos;t have an account? Register
                   {' '}
 
                 </button>
@@ -118,7 +118,7 @@ function Login() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* Footer?  */}
     </div>
   );
 }

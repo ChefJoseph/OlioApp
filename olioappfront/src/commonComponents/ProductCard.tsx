@@ -58,13 +58,16 @@ function ProductCard({ product, productData, setProductData }: Props) {
 
   return (
     <div className="max-w-xs max-h-xs mx-auto">
-    <Card>
-      <div className="">
+    <Card
+    className="active:border-gray-800 active:shadow-lg transition duration-150 ease-in-out"
+    onClick={()=> {scrollToTop(); handleCardClick(product)}}>
+      <div className=""
+      >
         <img
         src={product.image_url}
         alt="Olive Oil"
         className="object-contain overflow-hidden "
-        onClick={()=> {scrollToTop(); handleCardClick(product)}}
+        
         />
       </div>
       <a href="#">

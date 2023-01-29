@@ -32,7 +32,7 @@ function FeaturedProduct() {
   )
 
   return (
-    <div className="container py-16 pl-5" >
+    <div className="max-w-auto max-h-auto py-16 pl-5" >
 		<div className="">
 			<h2 className="text-2xl font-medium text-gray-700 mb-6">
             Featured product

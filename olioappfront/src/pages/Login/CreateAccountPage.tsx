@@ -37,6 +37,7 @@ function CreateAccountPage() {
         if (res.ok) {
           res.json()
             .then((data) => {
+              console.log(data)
               setErrorMessages('');
               setUser(data);
               if (data.account_type === 'admin') {
@@ -60,7 +61,7 @@ function CreateAccountPage() {
     <div className="mb-12">
   
       <div className="flex flex-col text-center justify-center items-center">
-        <h1 className="text-2xl mt-10">Create New Account</h1>
+        <h1 className="text-2xl my-10">Create a new account</h1>
         <p className="text-center text-red-500 text-lg ">
           {errorMessages ? errorMessages.map((error) => (
             <span key={error}>
@@ -70,7 +71,7 @@ function CreateAccountPage() {
             </span>
           )) : null}
         </p>
-        <div className="flex flex-col w-2/5 pt-0 shadow-lg rounded-lg px-6 py-5">
+        <div className="grid grid-cols-1 w-2/5 pt-0 shadow-lg rounded-lg px-6 py-5 ">
           <form onSubmit={handleSubmit}>
             <p className="text-lg font-semibold mb-2 text-left">First Name</p>
             <label htmlFor="firstName">
@@ -127,24 +128,27 @@ function CreateAccountPage() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </label>
+{/* Select role hidden */}
+            <div className="hidden">
             <p className="text-lg font-semibold mb-2 mt-3 text-left">User Type</p>
-            <select
-              className="w-full text-xl py-2 px-3 border cursor-default"
-              value={userType || ''}
-              onChange={(e) => setUserType(e.target.value)}
-            >
-              <option value="user">User</option>
-              <option value="admin">Admin</option>
-            </select>
+              <select
+                className="w-full text-xl py-2 px-3 border cursor-default"
+                value={userType || ''}
+                onChange={(e) => setUserType(e.target.value)}
+              >
+                <option value="user">User</option>
+                {/* <option value="admin">Admin</option> */}
+              </select>
+            </div>
             <button
-              className="bg-gray-800 text-white mt-6 py-3 px-6 rounded-md hover:bg-gray-500 w-full text-xl"
+              className="bg-gray-800 text-white mt-10 py-3 px-6 rounded-md hover:bg-gray-500 w-full text-xl"
               type="submit"
             >
               Create Account
             </button>
           </form>
           <button
-            className="mt-2 text-right mr-1 hover:text-slate-600"
+            className="mt-5  hover:text-slate-600"
             type="button"
             onClick={() => navigate('/login')}
           >
@@ -154,7 +158,7 @@ function CreateAccountPage() {
           </button>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

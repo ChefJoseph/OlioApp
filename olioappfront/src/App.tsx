@@ -60,23 +60,23 @@ function App() {
   }, [shoppingCart]); 
   return (
     <Routes>
-    <Route path="/#" element={<Home/>} />
-    <Route path="/home" element={<Home/>} />
-    <Route path="*" element={<Home/>} />
-    <Route path="/about" element={<AboutUs/>} />
-    <Route path="/login" element={<Login />} />
-    <Route path="createAccount" element={<CreateAccountPage/>} />
-    <Route path="/shopping" element={<ShoppingPage/>} />
-    <Route path="/products" element={<ProductPage/>} />
-    <Route path="/purchaseHistory" element={<PurchaseHistory/>} />
+      <Route path="/#" element={<Home/>} />
+      <Route path="/home" element={<Home/>} />
+      <Route path="*" element={<Home/>} />
+      <Route path="/about" element={<AboutUs/>} />
+      <Route path="/login" element={<Login />} />
+      <Route path="createAccount" element={<CreateAccountPage/>} />
+      <Route path="/shopping" element={<ShoppingPage/>} />
+      <Route path="/products" element={<ProductPage/>} />
+      <Route path="/purchaseHistory" element={<PurchaseHistory/>} />
 
-    <Route path="/admin" element={<Admin/>} />
-    <Route path="/addProduct" element={<AddProduct/>} />
-    <Route path="/editProduct" element={<EditProductPage/>} />
-    <Route path="/cart" element={<Cart/>} />
-    <Route path="/checkout" element={<CheckoutPage/>} />
-    
-  </Routes>
+      <Route path="/admin" element={<Admin/>} />
+      <Route path="/addProduct" element={<AddProduct/>} />
+      <Route path="/editProduct" element={<EditProductPage/>} />
+
+      <Route path="/cart" element={<Cart/>} />
+      <Route path="/checkout" element={<CheckoutPage/>} />
+    </Routes>
   );
 }
 

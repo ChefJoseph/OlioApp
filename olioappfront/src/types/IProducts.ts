@@ -13,6 +13,8 @@ export interface IProduct {
 }
 
 export const EmptyProductValue = {
+  results: '',
+  autofocus: '',
   name: '',
   region: '',
   location: '',

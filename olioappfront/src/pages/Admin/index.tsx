@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import AdminNavBar from './AdminNavBar'
 import AdminSideBar from './AdminSideBar'
-import ProductCard from './AdminProductCard'
+import AdminProductCard from './AdminProductCard'
 import Footer from '../../CommonComponents/Footer'
 import { EmptyProductValue, IProduct } from '../../types/IProducts';
 
@@ -46,7 +46,7 @@ function Admin() {
             </div>
     {/* Products */}
             <div id="productdiv" className="">
-              <ProductCard productData={productData} setProductData={setProductData} search={search}/>
+              <AdminProductCard productData={productData} setProductData={setProductData} search={search}/>
             </div>
           </div>
         </div>

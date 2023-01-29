@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import React, { createContext, useState, ReactNode } from 'react';
+import React, { createContext, useState, ReactNode} from 'react';
 import { IUser, EmptyUserValue } from './types/IUser';
 import { IProduct, EmptyProductValue } from './types/IProducts';
 import { IShoppingCart, EmptyShoppingCartValue } from './types/IShoppingCart';
@@ -34,7 +34,10 @@ export function AuthProvider({ children }:Props) {
       user, setUser, productItem, setProductItem, cartTotalItems, setCartTotalItems, shoppingCart, setShoppingCart, subtotal, setSubtotal,
     }}
     >
-      {children}
+      <div>
+        {children}
+      </div>
+      
     </AuthContext.Provider>
   );
 }
