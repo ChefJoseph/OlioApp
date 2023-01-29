@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :addresses
   resources :reviews, only:[:create, :show]
   resources :purchases, only:[:create]
   resources :products, except: [:destroy, :show]
