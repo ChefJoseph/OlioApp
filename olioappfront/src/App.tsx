@@ -19,7 +19,6 @@ import Greece from './pages/ShoppingPage/Greece';
 import Organic from './pages/ShoppingPage/Organic';
 import Flavored from './pages/ShoppingPage/Flavored';
 import ForCooking from './pages/ShoppingPage/ForCooking';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const {
