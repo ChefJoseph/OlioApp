@@ -107,58 +107,60 @@ function ShoppingSideBar({ setProductData }:Props) {
       };
     
   return (
-    <div id="sidebar" className="flex flex-col w-1/5 text-lg text-gray-800  mx-5 mt-4">
-      <p className="text-left text-xl px-3 pb-3 text-gray-800  rounded-t-lg font-semibold">Categories</p>
-      <div className="flex flex-col">
-        <button
-            className="py-3 hover:bg-gray-200 text-left px-3"
-            type="button"
-            onClick={handleAllProducts}
-        >
-            All Products
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 text-left px-3"
-            type="button"
-            onClick={handleItaly}
-        >
-            Italy
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 text-left px-3"
-            type="button"
-            onClick={handleSpain}
-        >
-            Spain
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 text-left px-3"
-            type="button"
-            onClick={handleGreece}
-        >
-            Greece
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 text-left px-3"
-            type="button"
-            onClick={handleOrganic}
-        >
-            Organic
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 text-left px-3"
-            type="button"
-            onClick={handleFlavored}
-        >
-            Flavored
-        </button>
-        <button
-            className="py-3 hover:bg-gray-200 text-left px-3"
-            type="button"
-            onClick={handleCooking}
-        >
-            For Cooking
-        </button>
+    <div id="sidebar" className="flex sticky top-0 flex-col w-1/5 text-lg text-gray-800  mx-5 mt-4 ">
+      <div className=" ">
+        <p className="text-left text-xl px-3 pb-3 text-gray-800  rounded-t-lg font-semibold">Categories</p>
+        <div className="flex flex-col">
+          <button
+              className="py-3 hover:bg-gray-200 text-left px-3"
+              type="button"
+              onClick={handleAllProducts}
+          >
+              All Products
+          </button>
+          <button
+              className="py-3 hover:bg-gray-200 text-left px-3"
+              type="button"
+              onClick={handleItaly}
+          >
+              Italy
+          </button>
+          <button
+              className="py-3 hover:bg-gray-200 text-left px-3"
+              type="button"
+              onClick={handleSpain}
+          >
+              Spain
+          </button>
+          <button
+              className="py-3 hover:bg-gray-200 text-left px-3"
+              type="button"
+              onClick={handleGreece}
+          >
+              Greece
+          </button>
+          <button
+              className="py-3 hover:bg-gray-200 text-left px-3"
+              type="button"
+              onClick={handleOrganic}
+          >
+              Organic
+          </button>
+          <button
+              className="py-3 hover:bg-gray-200 text-left px-3"
+              type="button"
+              onClick={handleFlavored}
+          >
+              Flavored
+          </button>
+          <button
+              className="py-3 hover:bg-gray-200 text-left px-3"
+              type="button"
+              onClick={handleCooking}
+          >
+              For Cooking
+          </button>
+        </div>
       </div>
     </div>
   )

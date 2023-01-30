@@ -50,12 +50,12 @@ function ForCooking() {
                     <div className="flex relative justify-center align-middle">
                         <img className="object-cover -z-1" src={background}></img>
                         <div id="hero-text" className="text-center absolute w-1/2">
-                            <h1 className="mt-16 text-4xl font-bold text-white sm:text-6xl">For Cooking Olive Oil</h1>
+                            <h1 className="mt-16 text-4xl font-bold text-white sm:text-6xl">For Cooking Oil</h1>
                             <p className="mt-6 font-semibold  leading-8 text-white text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                         </div>
                     </div>
                 </div>
-                <div id="productdiv" >
+                <div id="productdiv" className="h-screen" >
                     <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 ">
                         {renderProducts}
                     </div>

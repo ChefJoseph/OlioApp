@@ -24,7 +24,7 @@ console.log(user)
       if (user.account_type =='admin') {
         return (
           <li className="">
-            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="/admin">
+            <a className=" hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="/admin">
                 Admin Portal
             </a>
           </li>
@@ -61,27 +61,27 @@ return (
           <div>{renderAdminLink()}</div>
           
           <li className="">
-            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">
                 Your Account
             </a>
           </li>
           <li className="">
-            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="/orderhistory">
+            <a className=" hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="/orderhistory">
                 Orders & Returns
             </a>
           </li>
           <li className="">
-            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">
                 Invite
             </a>
           </li>
           <li className="">
-            <a className=" hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">
+            <a className=" hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">
                 Help Center 
             </a>
           </li>
           <li className="">
-            <a className=" rounded-b-lg hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#" onClick={handleLogout}>
+            <a className=" rounded-b-lg hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#" onClick={handleLogout}>
                 Log Out
             </a>
           </li>

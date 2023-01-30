@@ -7,7 +7,7 @@ class CreateAddresses < ActiveRecord::Migration[7.0]
       t.string :city
       t.string :state
       t.string :zip_code
-      t.integer :phone_number
+      t.string :phone_number
       t.integer :addressable_id
       t.string :addressable_type
       t.string :addressable_scope

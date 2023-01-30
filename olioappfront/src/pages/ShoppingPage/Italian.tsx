@@ -40,9 +40,9 @@ function Italian() {
   return (
     <div>
         <NavBar/>
-        <div className="flex row mt-5 mb-10">
+        <div className="flex row mt-5 mb-10 ">
             <ShoppingSideBar setProductData={setProductData} />
-            <div id="productshell" className="w-full mt-5 mr-5">
+            <div id="productshell" className="w-full mt-5 mr-5  ">
                 {/* <h1 className="text-2xl my-5 text-center text-gray-800 ">Search Products</h1> */}
     {/* Products */}
                 <div className="h-64 mb-10" >
@@ -55,7 +55,7 @@ function Italian() {
                         </div>
                     </div>
                 </div>
-                <div id="productdiv" >
+                <div id="productdiv" className="h-screen" >
                     <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 ">
                         {renderProducts}
                     </div>

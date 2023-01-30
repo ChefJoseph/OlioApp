@@ -28,7 +28,7 @@ function Footer() {
             </div>
           </div>
 
-          <div id="footerinfo" className="flex flex-cols-3 items-top">
+          <div id="footerinfo" className="flex flex-cols-3 items-top hover:cursor-pointer">
             <div className="px-10">
               <h1 className="mb-2 text-md font-bold">Company</h1>
               <ul className="font-normal text-sm">

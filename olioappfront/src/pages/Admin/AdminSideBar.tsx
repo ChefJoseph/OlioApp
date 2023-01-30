@@ -24,7 +24,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allItaly = data.filter((item:IProduct) => item.active === true && item.region === 'Italy');
+                  const allItaly = data.filter((item:IProduct) => item.region === 'Italy');
                   setProductData(allItaly);
                 });
             }
@@ -37,7 +37,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allSpain = data.filter((item:IProduct) => item.active === true && item.region=== 'Spain');
+                  const allSpain = data.filter((item:IProduct) => item.region=== 'Spain');
                   setProductData(allSpain);
                 });
             }
@@ -50,7 +50,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allGreece = data.filter((item:IProduct) => item.active === true && item.region === 'Greece');
+                  const allGreece = data.filter((item:IProduct) => item.region === 'Greece');
                   setProductData(allGreece);
                 });
             }
@@ -63,7 +63,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allOrganic = data.filter((item:IProduct) => item.active === true && item.organic === true);
+                  const allOrganic = data.filter((item:IProduct) => item.organic === true);
                   setProductData(allOrganic);
                 });
             }
@@ -76,7 +76,7 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allFlavored = data.filter((item:IProduct) => item.active === true && item.flavored === true);
+                  const allFlavored = data.filter((item:IProduct) => item.flavored === true);
                   setProductData(allFlavored);
                 });
             }
@@ -160,6 +160,13 @@ function AdminSideBar({ setProductData }:Props) {
             onClick={handleCooking}
         >
             For Cooking
+        </button>
+        <button
+            className="py-3 hover:bg-gray-200 text-red-600 text-left px-3"
+            type="button"
+            onClick={handleInactiveItems}
+        >
+            Inactive
         </button>
       </div>
     </div>

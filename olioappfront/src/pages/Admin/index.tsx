@@ -26,12 +26,12 @@ function Admin() {
   return (
     <div id= "index" className="">
         <AdminNavBar/>
-        <div id="adminbody" className="flex row mt-5 mb-10">
+        <div id="adminbody" className="flex row mt-5 mb-10 h-screen overflow-hidden">
           <AdminSideBar setProductData={setProductData}/>
   {/* Search */}
           <div id="productshell" className="w-full">
             <h1 className="text-2xl mt-5 text-center text-gray-800 ">Search Products</h1>
-            <div className="flex justify-center mb-10">
+            <div className="flex justify-center mb-10 ">
                 <label htmlFor="searchBar">
                     <input
                         className="text-l border p-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-slate-900 rounded-md mt-4"

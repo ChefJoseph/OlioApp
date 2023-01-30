@@ -81,7 +81,7 @@ function ProductCard({productData, setProductData, search }: Props) {
                 {/* <div>{product.description}</div> */}
                 </div>
             </div>
-            <div className="flex justify-around">
+            <div className="flex justify-around pb-2">
 {/* Edit  */}
                 <button           
                   type="button"

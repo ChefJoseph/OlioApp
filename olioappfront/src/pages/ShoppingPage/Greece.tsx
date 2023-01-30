@@ -55,7 +55,7 @@ function Greece() {
                         </div>
                     </div>
                 </div>
-                <div id="productdiv" >
+                <div id="productdiv" className="h-screen" >
                     <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 ">
                         {renderProducts}
                     </div>

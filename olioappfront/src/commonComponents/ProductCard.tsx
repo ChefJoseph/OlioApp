@@ -57,7 +57,7 @@ function ProductCard({ product, productData, setProductData }: Props) {
   };
 
   return (
-    <div className="max-w-xs max-h-xs mx-auto hover:shadow-lg">
+    <div className=" mx-auto hover:shadow-lg">
     <Card
     className="active:border-gray-800 active:shadow-lg transition duration-150 ease-in-out "
     onClick={()=> {scrollToTop(); handleCardClick(product)}}>
