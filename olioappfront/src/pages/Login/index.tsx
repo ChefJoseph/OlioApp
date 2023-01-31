@@ -59,7 +59,7 @@ function Login() {
           <div className="w-96">
             <div className="shadow-md rounded-lg">
               <form onSubmit={handleLogin}>
-                <div className="h-3 bg-gray-800 rounded-t-md" />
+                <div className="h-3 rounded-t-md" />
                 <div className="px-7 pt-5 pb-3">
                   <p className="text-center text-red-500 text-lg">{errorMessage || null}</p>
                   <p className="text-lg font-semibold mb-2">Email</p>

@@ -84,11 +84,11 @@ function Cart() {
             </div>
         </div>
 {/* renderCartCards         */}
-        <div>
+        <div className="">
            <CartProductCards/>
         </div>
 {/* Totals and Checkout button */}
-        <div className="w-full">
+        <div className="w-full mb-20">
             <div className="">
               {renderCheckOut()}
             </div>

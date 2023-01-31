@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    render json: Product.all
+    render json: Product.with_attached_image_url.all
   end
 
   # POST /products

@@ -18,7 +18,7 @@ function ProfileDropDown() {
       navigate('/login');
     };
 
-console.log(user)
+// console.log(user)
 
     const renderAdminLink = () => {
       if (user.account_type =='admin') {

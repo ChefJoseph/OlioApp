@@ -21,6 +21,20 @@ function FeaturedProduct() {
       });
   }, []);
 
+  const handleAllProducts = () => {
+    fetch('/products')
+      .then((res) => {
+        if (res.ok) {
+          res.json()
+            .then((data) => {
+              const allProducts = data
+              setProductData(allProducts);
+              navigate('/shopping')
+            });
+        }
+      });
+  };
+
   // const handleCardClick = (product: IProduct) => {
   //   setProductData(product);
   //   navigate('/individualProduct');
@@ -32,10 +46,15 @@ function FeaturedProduct() {
   )
 
   return (
-    <div className="max-w-auto max-h-auto py-16 pl-5" >
+    <div className="max-w-auto max-h-auto py-5 pl-5" >
 		<div className="">
 			<h2 className="text-2xl font-medium text-gray-700 mb-6">
             Featured products
+            <button 
+            className="rounded-lg bg-gray-800 mx-5 px-5 py-2 text-center text-sm font-semibold text-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onClick = {handleAllProducts}>
+                Shop all
+            </button>
 			</h2>
 			<div className="w-4/5 mx-auto grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
 				{renderProducts}
