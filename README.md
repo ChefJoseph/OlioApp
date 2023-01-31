@@ -12,4 +12,9 @@ Technologies: TypeScript, Tailwind CSS, Rails, PostgreSQL, Context API, Bcrypt, 
 
 ### Features
 
-Update 1/31 De-bugging Rails checkout code and stripe mock payment.
+To-do/I am open to collaborating on solutions for:
+     De-bugging Rails checkout code and stripe mock payment.
+     Build out Admin-UI for analtyics components etc. 
+     Search function and results page.
+     
+
