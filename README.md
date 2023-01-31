@@ -14,16 +14,18 @@ Technologies: TypeScript, Tailwind CSS, Rails, PostgreSQL, Context API, Bcrypt, 
 <h3>Home page</h3>
 <image src="" alt= "home"/>
 <h3>About</h3>
-<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/about.png"/>
+<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/about.png" width="1000"/>
 <h3>Login:</h3>
-<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/login.png"/>
-<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/createform.png"/>
+<p float="center">
+<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/login.png" width="400"/>
+<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/createform.png" width="400"/>
+</p>
 <h3>Shopping:</h3>
-<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/shopping.png"/>
+<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/shopping.png" width="1000"/>
 <h3>Admin portal:</h3>
-<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/adminhome.png"/>
+<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/adminhome.png" width="1000"/>
 <h3>Admin add product:</h3>
-<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/add new product.png"/>
+<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/add new product.png" width="400"/>
 
 <br>
 To-do/I am open to collaborating on solutions for:
