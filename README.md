@@ -12,7 +12,7 @@ Technologies: TypeScript, Tailwind CSS, Rails, PostgreSQL, Context API, Bcrypt, 
 
 ### Features
 <h3>Home page</h3>
-<image src="" alt= "home"/>
+<image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/Homepage.png" width="1000"/>
 <h3>About</h3>
 <image src="https://github.com/ChefJoseph/OlioApp/blob/main/olioappfront/src/assets/about.png" width="1000"/>
 <h3>Login:</h3>
