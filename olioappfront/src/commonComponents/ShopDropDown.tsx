@@ -27,37 +27,42 @@ const navigate = useNavigate()
         </button>
         <ul className="absolute hidden z-10 w-40 rounded-lg text-gray-700 bg-gray-100 pt-1 group-hover:block">
           <li className="">
+            <button className=" hover:bg-gray-200 py-2 px-4 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping')}>
+                All Products
+            </button>
+          </li>
+          <li className="">
             <a className="py-2 px-4 block whitespace-no-wrap" href="#">
                 Regions
             </a>
           </li>
           <li className="">
-            <button className=" hover:bg-gray-200 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping')}>
+            <button className=" hover:bg-gray-200 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping/italian')}>
                 Italy
             </button>
           </li>
           <li className="">
-            <button className=" hover:bg-gray-200 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/products')}>
+            <button className=" hover:bg-gray-200 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping/spain')}>
                 Spain
             </button>
           </li>
           <li className="">
-            <button className=" hover:bg-gray-200 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/products')}>
+            <button className=" hover:bg-gray-200 py-2 px-8 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping/greece')}>
                 Greece
             </button>
           </li>
           <li className="">
-            <button className="  hover:bg-gray-200 py-2 px-4 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/products')}>
+            <button className="  hover:bg-gray-200 py-2 px-4 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping/organic')}>
                 Organic
             </button>
           </li>
           <li className="">
-            <button className="  hover:bg-gray-200 py-2 px-4 w-full text-left  block whitespace-no-wrap" onClick={() => navigate('/products')}>
+            <button className="  hover:bg-gray-200 py-2 px-4 w-full text-left  block whitespace-no-wrap" onClick={() => navigate('/shopping/flavored')}>
                 Flavored
             </button>
           </li>
           <li className="">
-            <button className="rounded-b-lg  hover:bg-gray-200 py-2 px-4 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/products')}>
+            <button className="rounded-b-lg  hover:bg-gray-200 py-2 px-4 w-full text-left block whitespace-no-wrap" onClick={() => navigate('/shopping/forcooking')}>
                 For Cooking
             </button>
           </li>
