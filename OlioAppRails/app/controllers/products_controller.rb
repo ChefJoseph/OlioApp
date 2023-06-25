@@ -20,9 +20,10 @@ class ProductsController < ApplicationController
   end
 
   # # DELETE /products/1
-  # def destroy
-  #   @product.destroy
-  # end
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
