@@ -4,6 +4,7 @@ import { IUser, EmptyUserValue } from './types/IUser';
 import { IProduct, EmptyProductValue } from './types/IProducts';
 import { IShoppingCart, EmptyShoppingCartValue } from './types/IShoppingCart';
 
+/* eslint-disable */
 const AuthContext = createContext({
   user: EmptyUserValue,
   setUser: (_user: IUser) => {},
@@ -16,7 +17,7 @@ const AuthContext = createContext({
   shoppingCart: [EmptyShoppingCartValue],
   setShoppingCart: (_shoppingCart: IShoppingCart[]) => {},
 });
-
+/* eslint-enable */
   interface Props {
     children: JSX.Element|JSX.Element[];
   }

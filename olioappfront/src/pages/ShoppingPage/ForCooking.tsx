@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import AuthContext from '../../AuthProvider';
 import NavBar from '../../CommonComponents/Navbar';
 import Footer from '../../CommonComponents/Footer';
@@ -10,12 +10,12 @@ import background from '../../assets/tuscanyHero.png'
 
 
 function ForCooking() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
    
     // const [search, setSearch] = useState<string>('');
 
-    const filteredProducts = productData.filter((item, index) => item.name! && item.forcooking === true).reverse() ;
+    const filteredProducts = productData.filter((item) => (item.name ? item.name: '') && item.forcooking === true).reverse() ;
 
   useEffect(() => {
     fetch('/products')

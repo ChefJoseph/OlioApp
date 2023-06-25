@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import AuthContext from '../../AuthProvider';
 import NavBar from '../../CommonComponents/Navbar';
 import Footer from '../../CommonComponents/Footer';
@@ -9,26 +9,26 @@ import ShoppingSideBar from './ShoppingSideBar';
 import background from '../../assets/alhambra2hero.png'
 
 
-function Italian() {
-    const navigate = useNavigate();
+function Spain() {
+    // const navigate = useNavigate();
     const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
    
     // const [search, setSearch] = useState<string>('');
 
-    const filteredProducts = productData.filter((item, index) => item.name! && item.region === 'Spain').reverse() ;
+    const filteredProducts = productData.filter((item) => (item.name ? item.name : '') && item.region === 'Spain').reverse() ;
 
-//   useEffect(() => {
-//     fetch('/products')
-//       .then((res) => {
-//         if (res.ok) {
-//           res.json()
-//             .then((data) => {
-//               console.log(data);
-//               setProductData(data);
-//             });
-//         }
-//       });
-//   }, []);
+  useEffect(() => {
+    fetch('/products')
+      .then((res) => {
+        if (res.ok) {
+          res.json()
+            .then((data) => {
+              console.log(data);
+              setProductData(data);
+            });
+        }
+      });
+  }, []);
 
 
 
@@ -67,4 +67,4 @@ function Italian() {
   )
 }
 
-export default Italian
+export default Spain
