@@ -68,6 +68,17 @@ function EditProductPage() {
       });
   };
 
+  const handleDelete = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+   
+    fetch(`/products/${productItem.id}`, {
+      method: 'DELETE',
+    })
+        .then(() => {
+          navigate('/admin');
+        });
+  };
+
   const handleBackToAdminPage = () => {
     setProductItem({});
     navigate('/admin');
@@ -195,9 +206,16 @@ function EditProductPage() {
             >
               Update
             </button>
+            <button
+              className="bg-red-600 text-white mt-6 py-3 px-6 rounded-md hover:bg-slate-800 w-full text-xl"
+              type="submit"
+              onClick={handleDelete}
+            >
+              Delete
+            </button>
             <div className="flex justify-end mr-5">
               <button
-                className="mt-2  mr-1 hover:text-slate-600"
+                className="mt-4  mr-1 hover:text-slate-600"
                 type="button"
                 onClick={handleBackToAdminPage}
               >

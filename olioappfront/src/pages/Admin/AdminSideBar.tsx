@@ -89,12 +89,13 @@ function AdminSideBar({ setProductData }:Props) {
             if (res.ok) {
               res.json()
                 .then((data) => {
-                  const allCooking = data.filter((item:IProduct) => item.active === true && item.forcooking === true);
+                  const allCooking = data.filter((item:IProduct) => item.forcooking === true);
                   setProductData(allCooking);
                 });
             }
           });
       };
+
       const handleInactiveItems = () => {
         fetch('/products')
           .then((res) => {

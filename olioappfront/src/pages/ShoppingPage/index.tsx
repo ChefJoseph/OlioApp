@@ -18,7 +18,7 @@ function index() {
    
     // const [search, setSearch] = useState<string>('');
 
-    const filteredProducts = productData.filter((item, index) => (item.name ? item.name:'') && index >= 0).reverse() ;
+    const filteredProducts = productData.filter((item, index) => (item.name ? item.name:'') && index >= 0) ;
 
     useEffect(() => {
       fetch('/products')

@@ -11,7 +11,7 @@ interface Props {
 
 function ProductCard({productData, setProductData, search }: Props) {
     const navigate = useNavigate();
-    const { setProductItem } = useContext(AuthContext);
+    const { productItem, setProductItem } = useContext(AuthContext);
     const filteredProducts = productData.filter((item) => {
     // item.name!.toLowerCase().includes(search.toLowerCase())||
     // item.region!.toLowerCase().includes(search.toLowerCase())||
