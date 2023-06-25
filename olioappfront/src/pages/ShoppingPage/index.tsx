@@ -60,7 +60,7 @@ function index() {
       {/* Products */}
       {/* Hero  */}
             
-                  <div id="productdiv" className="h-screen" >
+                  <div id="productdiv" className="overflow-y-auto max-h-screen no-scrollbar" >
                       <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 ">
                           {renderProducts}
                       </div>

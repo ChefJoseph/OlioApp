@@ -34,11 +34,6 @@ function App() {
           res.json()
             .then((data) => {
               setUser(data);
-              if (data.account_type === 'admin') {
-                navigate('/admin');
-              } else if (data.account_type === 'user') {
-                navigate('/home');
-              }
             });
         }
       });

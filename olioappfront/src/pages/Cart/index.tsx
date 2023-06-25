@@ -29,7 +29,7 @@ function Cart() {
               </button>
             </div>
   {/* Subtotal  */}
-            <div className="text-xl pb-2">
+            <div className="text-xl py-2">
               <p className="">
                 Subtotal
                 <span className="float-right">${subtotalFix}</span>
@@ -88,7 +88,7 @@ function Cart() {
            <CartProductCards/>
         </div>
 {/* Totals and Checkout button */}
-        <div className="w-full mb-20">
+        <div className={`w-full mb-20 overflow-y-auto no-scroll-bar ${cartTotalItems === 0 ? 'mb-120' : ''}`}>
             <div className="">
               {renderCheckOut()}
             </div>
