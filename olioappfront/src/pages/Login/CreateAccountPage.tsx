@@ -2,8 +2,6 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../AuthProvider';
 
-import Footer from '../../CommonComponents/Footer';
-
 function CreateAccountPage() {
   const navigate = useNavigate();
   const { setUser } = useContext(AuthContext);

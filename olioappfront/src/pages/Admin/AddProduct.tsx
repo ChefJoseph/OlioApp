@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import AdminNavBar from './AdminNavBar'
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../CommonComponents/Footer';
 
 function AddProduct() {
   const navigate = useNavigate();
@@ -14,51 +13,64 @@ function AddProduct() {
   const [organic, setOrganic] = useState<string>('');
   const [flavored, setFlavored] = useState<string>('');
   const [forCooking, setForCooking] = useState<string>('');
-  const [errorMessages, setErrorMessages] = useState<[] | ''>([]);
+  const [errorMessages, setErrorMessages] = useState<string[]>([]);
   const activeStatus = 'true';
   
   const handleCreateNewProduct = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData();
-    if (image) {
-      formData.append('image_url', image);
-    }
-    formData.append('name', name);
-    formData.append('region', region);
-    formData.append('location', location);
-    formData.append('description', description);
-    formData.append('price', price);
-    formData.append('description', description);
-    formData.append('organic', organic);
-    formData.append('flavored', flavored);
-    formData.append('forcooking', forCooking);
-    formData.append('active', activeStatus);
+	e.preventDefault();
+	const formData = new FormData();
+	if (image) {
+	formData.append('image_url', image);
+	}
+	formData.append('name', name);
+	formData.append('region', region);
+	formData.append('location', location);
+	formData.append('description', description);
+	formData.append('price', price);
+	formData.append('description', description);
+	formData.append('organic', organic);
+	formData.append('flavored', flavored);
+	formData.append('forcooking', forCooking);
+	formData.append('active', activeStatus);
 
-    fetch('/products', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((res) => {
-        if (res.ok) {
-          res.json()
-            .then(() => {
-              setErrorMessages([]);
-              navigate('/admin');
-            });
-        } else {
-          res.json()
-            .then(({ errors }) => {
-              setErrorMessages(errors);
-            });
-        }
-      });
+	fetch('/products', {
+	method: 'POST',
+	body: formData,
+	})
+	.then((res) => {
+		if (res.ok) {
+		res.json()
+			.then(() => {
+			setErrorMessages([]);
+			navigate('/admin');
+			});
+		} else {
+		res.json()
+			.then(({ errors }) => {
+			setErrorMessages(errors);
+			});
+		}
+	});
   };
+
+	const scrollToTop = () => {
+		window.scrollTo({
+		top: 0,
+		behavior: "smooth",
+		});
+	};
+  
 
   return (
     <div>
         <AdminNavBar />
         <div className="flex flex-col text-center justify-center items-center">
-            <h1 className="text-2xl mt-10">Add New Product</h1>
+			<div className="mt-10 text-red-600">
+				{errorMessages.map((error, index) => (
+					<p key={index}>{error}</p>
+				))}
+			</div>
+            <h1 className="text-2xl my-10">Add New Product</h1>
             {/* <p></p> */}
             <div className="flex flex-col w-2/5 pt-0 shadow-lg rounded-lg px-6 py-5">
                 <form onSubmit={handleCreateNewProduct}>
@@ -161,6 +173,7 @@ function AddProduct() {
                     <button
                         className="bg-slate-900 text-white mt-6 py-3 px-6 rounded-md hover:bg-slate-800 w-full text-xl"
                         type="submit"
+						onClick={()=>{scrollToTop}}
                     >
                         Add New Product
                     </button>                 

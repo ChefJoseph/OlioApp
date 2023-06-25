@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../AuthProvider';
 import { IProduct } from '../../types/IProducts';
-import oliveoil from '../../assets/oliveoil.png'
 
 interface Props {
     productData:IProduct[]
@@ -13,11 +12,24 @@ interface Props {
 function ProductCard({productData, setProductData, search }: Props) {
     const navigate = useNavigate();
     const { setProductItem } = useContext(AuthContext);
-    const filteredProducts = productData.filter((item) => item.name!.toLowerCase().includes(search.toLowerCase())||
-    item.region!.toLowerCase().includes(search.toLowerCase())||
-    item.location!.toLowerCase().includes(search.toLowerCase())||
-    item.price!.toString().includes(search.toString())
-    );
+    const filteredProducts = productData.filter((item) => {
+    // item.name!.toLowerCase().includes(search.toLowerCase())||
+    // item.region!.toLowerCase().includes(search.toLowerCase())||
+    // item.location!.toLowerCase().includes(search.toLowerCase())||
+    // item.price!.toString().includes(search.toString())
+    // );
+    const name = item.name ? item.name.toLowerCase() : '';
+    const region = item.region ? item.region.toLowerCase() : '';
+    const location = item.location ? item.location.toLowerCase() : '';
+    const price = item.price ? item.price.toString() : '';
+
+    return (
+        name.includes(search.toLowerCase()) ||
+        region.includes(search.toLowerCase()) ||
+        location.includes(search.toLowerCase()) ||
+        price.includes(search.toString())
+    );  
+    });
 
     const handleEditPage = (product:IProduct) => {
         setProductItem(product);

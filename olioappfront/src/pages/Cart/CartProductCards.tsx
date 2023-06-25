@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import { isCompositeComponent } from 'react-dom/test-utils';
 import AuthContext from '../../AuthProvider';
 import { IShoppingCart } from '../../types/IShoppingCart';
 

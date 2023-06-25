@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../AuthProvider';
 import { Checkbox, Label } from 'flowbite-react';
+import AddressMain from './AddressMain'
 
 function CheckoutForm() {
     const navigate = useNavigate();
@@ -199,11 +200,13 @@ function CheckoutForm() {
                     <div className="flex justify-center">
                         <button type="submit" className="text-center bg-orange-500 text-white mt-5 py-2 px-10 rounded-md hover:bg-orange-400 text-xl">Place order</button>
                     </div>
+                    
                 </div>
                 <div></div>
                 <div></div>
             </div>
             </form>
+            <AddressMain/>
         </div>
     </div>
   )

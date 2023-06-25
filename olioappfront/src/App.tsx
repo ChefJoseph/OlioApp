@@ -34,11 +34,11 @@ function App() {
           res.json()
             .then((data) => {
               setUser(data);
-              // if (data.account_type === 'admin') {
-              //   navigate('/admin');
-              // } else if (data.account_type === 'user') {
-              //   navigate('/home');
-              // }
+              if (data.account_type === 'admin') {
+                navigate('/admin');
+              } else if (data.account_type === 'user') {
+                navigate('/home');
+              }
             });
         }
       });
@@ -46,7 +46,7 @@ function App() {
 
   // Find Cart Total Items
   useEffect(() => {
-    const findCartTotalItems = shoppingCart.reduce((a, b) => a + b.quantity!, 0);
+    const findCartTotalItems = shoppingCart.reduce((a, b) => a + (b.quantity ?? 0), 0);
     setCartTotalItems(findCartTotalItems);
   }, [shoppingCart]);
 
@@ -56,7 +56,8 @@ function App() {
       if (item.quantity && item.price) {
         return item.quantity * item.price;
       }
-    }).reduce((a, b) => a! + b!, 0);
+      return 0;
+    }).reduce((a, b) => a + b, 0);
     setSubtotal(findCartSubTotal || 0);
   }, [shoppingCart]);
 

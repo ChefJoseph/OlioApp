@@ -13,12 +13,10 @@ function ProductPage() {
     } = useContext(AuthContext);
 
     const [addToCartNumber, setAddToCartNumber] = useState<number>(1);
-    const [selectedOption, setSelectedOption] = useState<string>("1");
 
     const selectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
       const value = parseInt(event.target.value);
       setAddToCartNumber(value)
-      setSelectedOption("1")
     };
 
     useEffect(() => {
@@ -155,9 +153,9 @@ function ProductPage() {
         
         {productItem.active === true ? (
           <p className="text-2xl mt-5">
-            ${productItem.price!}</p>
+            ${productItem.price ? productItem.price : ''}</p>
           ) : (<p className="text-2xl mt-5 line-through">
-          $ {productItem.price!}</p>
+          $ {productItem.price ? productItem.price : ''}</p>
           )
         }
 

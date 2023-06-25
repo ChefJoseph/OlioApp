@@ -20,14 +20,14 @@ function Cart() {
         <div className="flex justify-end">
           <div className="grid-col-1 my-5 mr-5">
   {/* clear entire cart */}
-            {/* <div >
+            <div >
               <button 
                   className="rounded-lg bg-gray-800 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
-                  onClick={() => handleRemoveAllItems()}
+                  onClick={handleRemoveAllItems}
               >
                 Clear cart
               </button>
-            </div> */}
+            </div>
   {/* Subtotal  */}
             <div className="text-xl pb-2">
               <p className="">
@@ -92,6 +92,7 @@ function Cart() {
             <div className="">
               {renderCheckOut()}
             </div>
+            
         </div>
         <Footer/>
     </div>

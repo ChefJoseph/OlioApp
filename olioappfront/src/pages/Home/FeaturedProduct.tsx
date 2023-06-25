@@ -6,7 +6,7 @@ import { EmptyProductValue, IProduct } from '../../types/IProducts';
 function FeaturedProduct() {
   const navigate = useNavigate()
   const [productData, setProductData] = useState<IProduct[]>([EmptyProductValue]);
-  const filteredProducts = productData.filter((item, index) => item.name! && index >= 1 && index <=3).reverse() ;
+  const filteredProducts = productData.filter((item, index) => item.name && index >= 1 && index <=3).reverse() ;
 
   useEffect(() => {
     fetch('/products')

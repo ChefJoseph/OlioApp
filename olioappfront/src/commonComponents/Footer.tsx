@@ -14,7 +14,7 @@ function Footer() {
         <div className="flex justify-between pb-8 pt-4 text-white sm:flex-row sm:items-baseline md:space-x-10 lg:space-x-12 xl:space-x-24">
           <div id="footerlogo&subscribe" className="items-top">
             <div className="order-1 md:order-2 mt-5">
-              <a href="/#" className="flex items-center ">
+              <a className="flex items-center" onClick={scrollToTop}>
                 <span className="flex items-center tracking-wide no-underline hover:no-underline font-medium text-white text-4xl ">o l i o</span>
               </a>
               <p className="my-5 text-md font-bold">Get updates</p>
