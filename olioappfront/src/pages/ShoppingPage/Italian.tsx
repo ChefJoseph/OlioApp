@@ -15,7 +15,7 @@ function Italian() {
    
     // const [search, setSearch] = useState<string>('');
 
-    const filteredProducts = productData.filter((item) => (item.name ? item.name:'') && item.region === 'Italy').reverse() ;
+    const filteredProducts = productData.filter((item) => (item.name ? item.name:'') && item.region === 'Italy');
 
   useEffect(() => {
     fetch('/products')

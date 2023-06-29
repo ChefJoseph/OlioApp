@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './AuthProvider';
 import './index.css';
 import App from './App';
-
+import 'dotenv/config';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

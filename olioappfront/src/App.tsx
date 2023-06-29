@@ -24,7 +24,7 @@ function App() {
   const {
     setUser, setCartTotalItems, shoppingCart, setSubtotal,
   } = useContext(AuthContext);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Auto Login
   useEffect(() => {
@@ -41,13 +41,13 @@ function App() {
 
   // Find Cart Total Items
   useEffect(() => {
-    const findCartTotalItems = shoppingCart.reduce((a, b) => a + (b.quantity ?? 0), 0);
+    const findCartTotalItems = (shoppingCart ?? []).reduce((a, b) => a + (b.quantity ?? 0), 0);
     setCartTotalItems(findCartTotalItems);
   }, [shoppingCart]);
 
   // Find Cart Subtotal
   useEffect(() => {
-    const findCartSubTotal = shoppingCart.map((item) => {
+    const findCartSubTotal = (shoppingCart ?? []).map((item) => {
       if (item.quantity && item.price) {
         return item.quantity * item.price;
       }

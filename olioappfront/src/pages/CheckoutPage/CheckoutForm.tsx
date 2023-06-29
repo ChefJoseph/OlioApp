@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../AuthProvider';
 import { Checkbox, Label } from 'flowbite-react';
 import AddressMain from './AddressMain'
+import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import {PaymentElement} from '@stripe/react-stripe-js';
+
 
 function CheckoutForm() {
     const navigate = useNavigate();
@@ -30,6 +33,7 @@ function CheckoutForm() {
     const tax = parseFloat((subtotalFixed * 0.08875).toFixed(2));
     const shippingCost = parseFloat((10.00).toFixed(2));
     const total = (subtotalFixed + tax + shippingCost).toFixed(2);
+ 
 
     const handleCheckOut = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -197,15 +201,16 @@ function CheckoutForm() {
 
                         </div>
                     </div>
+            <PaymentElement/>
                     <div className="flex justify-center">
                         <button type="submit" className="text-center bg-orange-500 text-white mt-5 py-2 px-10 rounded-md hover:bg-orange-400 text-xl">Place order</button>
                     </div>
-                    
                 </div>
                 <div></div>
                 <div></div>
             </div>
             </form>
+           
             <AddressMain/>
         </div>
     </div>
